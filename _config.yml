@@ -1,1 +1,16 @@
+# Site
+name: "My Site"
+title: "My Site"
+description: "A blog maybe."
+#logo: ''
+#favicon: ''
+#baseurl: 
+#include: ["_pages"]
+#permalink: /:title/
+
+# Authors
+authors:
+  A.K.:
+    name: A.K.
+    display_name: A.K.
 theme: jekyll-theme-cayman
