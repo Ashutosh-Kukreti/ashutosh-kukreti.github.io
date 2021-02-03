@@ -367,7 +367,7 @@ HTTP Proxies receive requests from a client and relay them. They also typically 
 In Zap we can click the browser's icon to open browsers,we don't have to configure proxy on our browser.<br>
 On left pane ZAP shows site pages and on right side the requests and responses.<br>
 Click on green icon (right of firefox) to disable ZAP HUD before configuring proxy.</p>
-<p><img src="../../../_resources/e80d18a0e39b4bd291feb3e6d4140d5a.png" alt="11e6a70d33ff52a348d3f9ef912612be.png"></p>
+<p><img src="../https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/e80d18a0e39b4bd291feb3e6d4140d5a.png" alt="11e6a70d33ff52a348d3f9ef912612be.png"></p>
 <h1 id="filter-history-for-webgoat">Filter History for WebGoat</h1>
 <p>Below we can also apply filter in ZAP to filter traffic. Click on funnel icon below Histroy tab.<br>
 Then in the URL Inc Regex box type:</p>
@@ -382,7 +382,7 @@ Then in the URL Inc Regex box type:</p>
 Before we start diving into intercepting requests with ZAP we need to exclude the internal requests from the WebGoat framework otherwise ZAP will also stop at all the requests which are only necessary for the internal working of WebGoat.<br>
 Click <strong>red 'X' icon</strong> at icon bar. In<br>
 Location box select <strong>Request Header</strong> and in string type <strong>'POST'</strong>.The two play buttons before can be used to send request forward and the red stop button will cancel it (appear only if there is an request).</p>
-<p><img src="../../../_resources/9b1101f1b4ac43b78d74b7e5cb163120.png" alt="a38558eaa74bfc4b6ce0eaf5c372d7ae.png"></p>
+<p><img src="../https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/9b1101f1b4ac43b78d74b7e5cb163120.png" alt="a38558eaa74bfc4b6ce0eaf5c372d7ae.png"></p>
 <p>It will intercept requests when the request header contains a POST.<br>
 Temporarily deactivate them and <strong>enable them again when you are just about to intercept the request.</strong></p>
 <h1 id="intercept-and-modify-a-request">Intercept and modify a request</h1>
@@ -392,7 +392,7 @@ Temporarily deactivate them and <strong>enable them again when you are just abou
 In the &quot;History&quot; window select the URL you want to resend right click on the URL and select <strong>Open/Resend with Request Editor (Hand Icon)</strong>.<br>
 Request are also available on right pane of ZAP.<br>
 A new window will open and here you can modify the request and <strong>click send</strong>. In the response tab you can inspect the response of the request.</p>
-<p><img src="../../../_resources/89023db942574f379caa1fef9d352233.png" alt="76e64ac778e97eccc9dfa297fb84073a.png"></p>
+<p><img src="../https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/89023db942574f379caa1fef9d352233.png" alt="76e64ac778e97eccc9dfa297fb84073a.png"></p>
 <h1 id="proxy-from-zap-to-https">Proxy from ZAP to https</h1>
 <p>ZAP can also be configured to proxy https requests. It will terminate the https connection in OWASP Zap and then proxy it to the target using its own keystore.<br>
 ZAP even proxy to sites with mutual TLS (need keystore and key for the connection)</p>

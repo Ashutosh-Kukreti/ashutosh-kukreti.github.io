@@ -388,33 +388,33 @@
 </ul>
 </li>
 </ul>
-<p><img src="../../_resources/19e0c022efe34e2c9b3f9c9b1f87be21.png" alt="7963302418de08866288e7b48162bcb7.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/19e0c022efe34e2c9b3f9c9b1f87be21.png" alt="7963302418de08866288e7b48162bcb7.png"></p>
 <p>Select your network device interface and press <em>‘bluefin’</em> button  to see network traffic.<br>
 Click on <em>settings(screw)</em> button to get details of your network interface.<em>’Lifelines’</em> shows there’s traffic flowing through the following interface.</p>
-<p><img src="../../_resources/fb7ea82cce604ad49008730c3455fe0e.png" alt="ac5a349ac93669fc6f7e79bea28e1430.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/fb7ea82cce604ad49008730c3455fe0e.png" alt="ac5a349ac93669fc6f7e79bea28e1430.png"></p>
 <p>By default <strong>promiscuous mode</strong> is enabled meaning wireshark will receive all traffic on the network.Enabling it allows us to view all the packets on the network without limiting to the packets associated with our network adapter.</p>
 <p><strong>Filtering packets</strong><br>
 If you want to investigate something specific(like a protocol), you can use the Wireshark filter option. A basic method of filtering packets is to use the filter box on the upper section of the tool.For example, if you want to see the results of only DNS traffic, write <strong>&quot;dns”</strong>.</p>
-<p><img src="../../_resources/e5ab260d080f4a90ba8e619a0bd3cf97.png" alt="a6d3d15708b75b12294dd45935915d0b.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/e5ab260d080f4a90ba8e619a0bd3cf97.png" alt="a6d3d15708b75b12294dd45935915d0b.png"></p>
 <hr>
 <p><strong>1. Nmap TCP Connect scan</strong></p>
 <p>In it we establish a connection with the target by issuing the <strong>“connect” system call</strong>.But the problem with this scan is that it takes time to complete and it require to generate more packets to obtain information.On the other hand, targets are more likely to allow the connection because it tries to establish a connection with target same as network enabled applications like <em>web browsers</em>.<strong>TCP Connect Scan</strong> sends a ACK packet and establish the connection.After it establish the connection, it resets the connection.</p>
-<p><img src="../../_resources/5b6b9fbb459b45c3969f5aa12ac298bc.png" alt="578aa05f2e75c52e38c13c2e260ff2e8.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/5b6b9fbb459b45c3969f5aa12ac298bc.png" alt="578aa05f2e75c52e38c13c2e260ff2e8.png"></p>
 <p><strong>Syntax:</strong></p>
 <blockquote>
 <p>nmap -sT [TARGET] -p [PORT RANGES]</p>
 </blockquote>
 <p>Adding <strong>-p</strong> option will scan only specified ports.</p>
 <p><strong>Metasploitable2 TCP connect scan of ports 1 to 100</strong></p>
-<p><img src="../../_resources/eba89875693b4677b7edb655524b67fa.png" alt="d24897498e270ad50acf9c3e152322f7.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/eba89875693b4677b7edb655524b67fa.png" alt="d24897498e270ad50acf9c3e152322f7.png"></p>
 <p><strong>Wireshark Output of the scan</strong></p>
-<p><img src="../../_resources/3bdd6a12b8b24b849f18e323136ba303.png" alt="76ac4b54672533c56f6435dd470e099d.png"></p>
-<p><img src="../../_resources/6d67b2a4ed27462b8105308cbf3a90ce.png" alt="36361149318eca0ab3bcf5cff535676c.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/3bdd6a12b8b24b849f18e323136ba303.png" alt="76ac4b54672533c56f6435dd470e099d.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/6d67b2a4ed27462b8105308cbf3a90ce.png" alt="36361149318eca0ab3bcf5cff535676c.png"></p>
 <ul>
 <li>Above we can see the traffic going back and forth between our <strong>machine(192.x.x.92)</strong> and <strong>metasploitable2(192.x.x.151)</strong>.</li>
 </ul>
 <p>Meaning of the <strong>default Wireshark colors</strong>:</p>
-<p><img src="../../_resources/3ba6c7ad2614486085c514cbcda036a4.png" alt="4206ef0c2c3d76162da32fa5dfd6938e.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/3ba6c7ad2614486085c514cbcda036a4.png" alt="4206ef0c2c3d76162da32fa5dfd6938e.png"></p>
 <p><strong>Behind the scenes:</strong><br>
 Here nmap is completing a <strong>TCP Three-Way Handshake</strong>.When we connect to each port we are using the TCP Protocol to transmit data between our machine and metasploitable2.</p>
 <p><strong>TCP 3-way handshake :</strong></p>
@@ -430,7 +430,7 @@ Here nmap is completing a <strong>TCP Three-Way Handshake</strong>.When we conne
 <p>We will send back the [ACK] flag to acknowledge the response of metasploitable2 and we establish a reliable connection.</p>
 </li>
 </ol>
-<p><img src="../../_resources/eba659586fdd4a8c93dbae43dbd78db3.png" alt="915c068da3f34d93f2efd5ff87d159f6.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/eba659586fdd4a8c93dbae43dbd78db3.png" alt="915c068da3f34d93f2efd5ff87d159f6.png"></p>
 <ol start="4">
 <li><strong>[RST]</strong> is for resetting the connection. It is used when a TCP end detects errors on connection and these errors cannot be recovered from any TCP recovery method ( re transmissions etc) .Here TCP layer <em>reset the connection (terminate the connection)</em> , so that there can be a fresh start.</li>
 </ol>
@@ -444,23 +444,23 @@ It help us to be <strong>little less noisy</strong> and <strong>covert</strong> 
 <li>It works on <strong>TPC 3-way handshake</strong> and requires raw-packet privileges that need <strong>root access</strong>.</li>
 </ul>
 <p><strong>Open State:</strong></p>
-<p><img src="../../_resources/e5a5856cde264ee5af46fe890ccded47.png" alt="c3d248487de57c52e48a3111e6e120b3.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/e5a5856cde264ee5af46fe890ccded47.png" alt="c3d248487de57c52e48a3111e6e120b3.png"></p>
 <p>Here we try to <strong>establish a connection</strong> with target by sending TCP SYN packet. In this situation server sends a SYN/ACK packets to establish the connection.This is the result that Nmap uses to determine whether the port is open. Nmap reset the connection at the end.</p>
 <p><strong>Close state:</strong></p>
-<p><img src="../../_resources/566d17445a324692a145d00bbd6300bd.png" alt="9e783030bb72bec16fbe15d370d51aaa.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/566d17445a324692a145d00bbd6300bd.png" alt="9e783030bb72bec16fbe15d370d51aaa.png"></p>
 <p>TCP SYN packet is send to the target as the last time and what happened here is <strong>target directly reject</strong>  the connection with RST packet due to the closed port.</p>
 <p><strong>Filtered port:</strong></p>
-<p><img src="../../_resources/53035b2eeda94788860fedb2db5b2978.png" alt="faf4e6a25303f1943e0922b2f48c241f.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/53035b2eeda94788860fedb2db5b2978.png" alt="faf4e6a25303f1943e0922b2f48c241f.png"></p>
 <p>Target <strong>doesn't sends a reply back</strong>,not even a RST packet to terminate the connection. Most accurate reason can be a <strong>firewall</strong> on the target side blocks reply packets. So nmap decides this type of ports as filtered.</p>
-<p><img src="../../_resources/f2750f7d811a48038f4c32e460e7dcde.png" alt="8cb2710b450bd2d64b77befc454260db.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/f2750f7d811a48038f4c32e460e7dcde.png" alt="8cb2710b450bd2d64b77befc454260db.png"></p>
 <p><strong>Syntax:</strong></p>
 <blockquote>
 <p>nmap -sS [TARGET] -p [PORT RANGES]</p>
 </blockquote>
 <p><strong>Metasploitable 2 TCP SYN(Stealth) scan of ports 1 to 100</strong></p>
-<p><img src="../../_resources/1ffcecede9e84d9ea0c96e4c5e1dfffb.png" alt="5fa33c5e8ab6b65165a5d6f40ed1fb90.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/1ffcecede9e84d9ea0c96e4c5e1dfffb.png" alt="5fa33c5e8ab6b65165a5d6f40ed1fb90.png"></p>
 <p>In this scan nmap <strong>prevent</strong> the <strong>completing</strong> of the <strong>TCP 3-way handshake</strong> to avoid raising any alarm bells. It first sends the [SYN] flag and receive [SYN, ACK] flag back. After that it sends the [RST]=Reset flag back (highlighted in red) which prematurely terminates the connection.</p>
-<p><img src="../../_resources/27da369125c94d6a83fb4a99cb1aa087.png" alt="774446f291dd33ce0e02ac6d5c90f8c6.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/27da369125c94d6a83fb4a99cb1aa087.png" alt="774446f291dd33ce0e02ac6d5c90f8c6.png"></p>
 <ul>
 <li>Therefore in the <strong>log files it no longer show</strong> that a TCP 3-way handshake was completed and we are less likely to be blocked by an <strong>IPS (Intrusion Detection System)</strong>.</li>
 <li><strong>TCP Connect scan</strong> establish a <em>full connection</em> with the target but <strong>SYN scan</strong> completes only a <em>half of the connection</em> with target.</li>

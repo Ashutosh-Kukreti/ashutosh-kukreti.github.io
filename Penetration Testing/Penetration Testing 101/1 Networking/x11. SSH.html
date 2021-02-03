@@ -377,7 +377,7 @@ SSH is based on a Unix shell, therefore standard Unix commands can be used to vi
 <ol>
 <li><strong>Symmetrical encryption</strong></li>
 </ol>
-<p><img src="../../_resources/c34e94f54d1a4d85ae05c1c39a8cc439.png" alt="07e36698535c40f58751dcf7941e8f1b.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/c34e94f54d1a4d85ae05c1c39a8cc439.png" alt="07e36698535c40f58751dcf7941e8f1b.png"></p>
 <p>In it a <strong>single key</strong> is used to encrypt and decrypt the messages.<br>
 It's also called “shared secret” encryption, or “secret key” encryption.<br>
 SSH use these keys  in order to encrypt the entire connection.<br>
@@ -394,7 +394,7 @@ A message that is encrypted by a machine’s public key, can only be decrypted b
 Meaning that the public key can not decrypt the messages it encrypt.<br>
 Therefore server and client use each others public keys to encrypt the message and decrypt it with their own private key.</li>
 </ol>
-<p><img src="../../_resources/79f25e1f12c741d080607ccf1cd07b81.png" alt="45307bc12baa4c06cdf683878ac6c94b.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/79f25e1f12c741d080607ccf1cd07b81.png" alt="45307bc12baa4c06cdf683878ac6c94b.png"></p>
 <p><strong>Usage</strong></p>
 <ul>
 <li>This encryption is used during the key exchange algorithm of symmetric encryption. Before initiating a secured connection, both parties generate temporary public-private key pairs, and share their respective private keys to produce the shared secret key.</li>
@@ -413,12 +413,12 @@ SSH uses hashes to verify the authenticity of messages. This is done using <stro
 <li>
 <p>Then the key and the message are  <strong>concatenated (joined)</strong>  and hashed together and called <strong>HMAC</strong>.This makes it impossible to find the key as hash cannot be reversed.<br>
 An <strong>HMAC</strong> is a MAC which is based on a hash function.<br>
-<img src="../../_resources/72b680aa51094dca8f66205fac3ed94a.png" alt="c31f3be9143e898185aafbe920f393f7.png"></p>
+<img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/72b680aa51094dca8f66205fac3ed94a.png" alt="c31f3be9143e898185aafbe920f393f7.png"></p>
 </li>
 </ul>
 <p>It is easy to generate a cryptographic hash from a given input, but <strong>impossible to reverse it</strong> (generate the input from the hash). This means that if a client holds the correct input, they can generate the crypto-graphic hash and compare its value to verify whether they possess the correct input.</p>
 <p><strong>Working</strong></p>
-<p><img src="../../_resources/81a903ff42654aa9856287ffbb7f8b5c.png" alt="52b102b2853da35dec451a5f8aa538f5.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/81a903ff42654aa9856287ffbb7f8b5c.png" alt="52b102b2853da35dec451a5f8aa538f5.png"></p>
 <p>SSH uses the client-server model.<br>
 The host (server) listens on SSH assigned port or 22 for incoming connections.<br>
 It organizes the secure connection by authenticating the client and opening the correct shell environment if the verification is successful.</p>
@@ -462,7 +462,7 @@ To connect to a system:</p>
 <p>ssh [USERNAME]@[TARGET IP]</p>
 </blockquote>
 <p>To specify a port, use <strong>-p [PORT]</strong></p>
-<p><img src="../../_resources/1b3da43b5d3b4f8bb99d46044a9f3e8c.png" alt="e3a0900c0a3c65806dd570fcec0fdc85.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/1b3da43b5d3b4f8bb99d46044a9f3e8c.png" alt="e3a0900c0a3c65806dd570fcec0fdc85.png"></p>
 <p>Here we are connecting to a <strong>Metasploitable2 server (left)</strong> using ssh command with username <strong>‘user’ (right)</strong>.</p>
 <p>First the <strong>RSA public key</strong> of the <strong>server</strong> is saved in <strong>known_hosts file in .ssh directory</strong> because we are making connection to the server for the first time.</p>
 <p>After that we enter <strong>password</strong> for <em>’user’</em><br>
@@ -472,15 +472,15 @@ and execute some Linux commands to get information about user and the server.</p
 <li>The client (our machine) begins the initial TCP handshake with the server and sends <strong>SSH connection request</strong> to the server and the client is running OpenSSH v8.2.</li>
 </ol>
 <p><strong>Note:</strong> SSH-2 and OpenSSH are essentially the same.</p>
-<p><img src="../../_resources/11a386d51bef46308f23121b2ffb0e82.png" alt="578ed5164d17c83a892ff36f96112187.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/11a386d51bef46308f23121b2ffb0e82.png" alt="578ed5164d17c83a892ff36f96112187.png"></p>
 <p>The server is replying to our request using OpenSSH v4.7p1 and now we also know that server is based on Ubuntu or Debian.</p>
-<p><img src="../../_resources/63d47e3aedbd40a48d787a22282ee4bd.png" alt="da91d714f0ee6c51bfa1548742e9ca60.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/63d47e3aedbd40a48d787a22282ee4bd.png" alt="da91d714f0ee6c51bfa1548742e9ca60.png"></p>
 <ol start="2">
 <li>Here, the client tells the server the algorithms it supports for each function <strong>(encryption, MAC, key exchange, host authentication, compression)</strong> in order of preference.</li>
 </ol>
-<p><img src="../../_resources/e73ae8299f1d4e158e9e2534ffc80438.png" alt="13fe93111e74afb96eebb51feac679bc.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/e73ae8299f1d4e158e9e2534ffc80438.png" alt="13fe93111e74afb96eebb51feac679bc.png"></p>
 <p>The server will send us it’s list.</p>
-<p><img src="../../_resources/0bec11ef46b64a24b11afc459224b1c3.png" alt="3238bc4b72744ef8672a65d0e8211208.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/0bec11ef46b64a24b11afc459224b1c3.png" alt="3238bc4b72744ef8672a65d0e8211208.png"></p>
 <p>From the two lists of algorithms the <strong>same key exchange algorithm</strong> will be used.</p>
 <ol start="3">
 <li>Now following packets will be shared between both machines:</li>
@@ -491,7 +491,7 @@ SSHv2 Server: Diffie-Hellman Key Exchange Reply<br>
 SSHv2 Client: Diffie-Hellman GEX Init<br>
 SSHv2 Server: Diffie-Hellman GEX Reply</p>
 </blockquote>
-<p><img src="../../_resources/a72dda0d8eda416789b2f45cd44e0a98.png" alt="79d3e9388ea99a93d606e43eaecb9c87.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/a72dda0d8eda416789b2f45cd44e0a98.png" alt="79d3e9388ea99a93d606e43eaecb9c87.png"></p>
 <p>Above we can see that,</p>
 <p>This SSH session will be using <strong>AES-128bit in Counter mode</strong> for <strong>symmetric encryption</strong> with an <strong>HMAC</strong> based upon <strong>MD5</strong> to ensure message integrity.</p>
 <p>and</p>
@@ -501,18 +501,18 @@ SSHv2 Server: Diffie-Hellman GEX Reply</p>
 <li>The shared secret is then used to encrypt all communication that follows.</li>
 <li>After the session encryption is established, the user authentication stage begins <strong>(Step 5)</strong>.</li>
 </ul>
-<p><img src="../../_resources/2926076563db41289335f904a071b32f.png" alt="f2cd6954a7d5e020700b8ed85d606178.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/2926076563db41289335f904a071b32f.png" alt="f2cd6954a7d5e020700b8ed85d606178.png"></p>
 <p><strong>Note:</strong> The reply of the server also contains it’s public host key (identity) or certificates. If  the client has never seen it, the client usually asks the user if it should trust it (<strong>The RSA key fingerprint in the beginning</strong>).</p>
 <ol start="4">
 <li>New Keys is an acknowledgment that both will use the same key for communication.</li>
 </ol>
-<p><img src="../../_resources/4e165b2af7ad402d95096cd28415e7a9.png" alt="23fd9d28df57c3f7161b1abd309baede.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/4e165b2af7ad402d95096cd28415e7a9.png" alt="23fd9d28df57c3f7161b1abd309baede.png"></p>
 <ol start="5">
 <li>All the data sent by client to server will now be encrypted including the user password and commands like <em>whoami,id,uname -a and exit.</em></li>
 </ol>
-<p><img src="../../_resources/47bedd704ae24d0f8e2ac1b9a7ee681d.png" alt="19a385d3985233f348cf8c5c383e3f46.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/47bedd704ae24d0f8e2ac1b9a7ee681d.png" alt="19a385d3985233f348cf8c5c383e3f46.png"></p>
 <p>Below we can see servers public key stored in our machine <strong>(in .ssh/known_hosts)</strong> and <strong>user's</strong> public key in server <strong>(in .ssh/authorized_keys).</strong></p>
-<p><img src="../../_resources/56a0a27d2afc4b6cb78521a89ddc8428.png" alt="f9a86b0d9c98be0738a3eab5fcaed894.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/56a0a27d2afc4b6cb78521a89ddc8428.png" alt="f9a86b0d9c98be0738a3eab5fcaed894.png"></p>
 <p>SSH can use either <strong>&quot;RSA&quot; (Rivest-Shamir-Adleman) or &quot;DSA&quot; (Digital Signature Algorithm) keys</strong>.</p>
 <p><strong>RSA (Rivest-Shamir-Adleman)</strong> is an <strong>asymmetric</strong> cryptographic algorithm used by modern computers to encrypt and decrypt messages.</p>
 <p><strong>DSA</strong> is not used anymore as it is <strong>less secure.</strong></p>

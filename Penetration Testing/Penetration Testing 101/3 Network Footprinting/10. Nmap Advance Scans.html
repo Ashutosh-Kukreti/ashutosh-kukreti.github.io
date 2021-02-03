@@ -361,7 +361,7 @@
 	</style><div id="rendered-md"><p><strong>Scan all 65535 ports</strong><br>
 By default Nmap only scan <strong>top 1000 ports</strong> and uses <strong>TCP as default protocol</strong> for port scan.<br>
 To <strong>scan all</strong> the <em>65535 ports</em> we can use the <strong>-p 0-65535 or -p-</strong> option.</p>
-<p><img src="../../_resources/da84689caf9b4db5acb0ee2627f8745d.png" alt="928babb329b865bde4b5e303a2e5ba89.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/da84689caf9b4db5acb0ee2627f8745d.png" alt="928babb329b865bde4b5e303a2e5ba89.png"></p>
 <hr>
 <p><strong>UDP Port Scan</strong><br>
 Most services on the internet uses TCP but services like <strong>DNS,SNMP and DHCP</strong> uses UDP.<br>
@@ -369,10 +369,10 @@ UDP scan is <strong>slower and difficult</strong>  as compare to TCP.</p>
 <ul>
 <li>Some <strong>common UDP services</strong> and ports:</li>
 </ul>
-<p><img src="../../_resources/7fa4e5ce8d5e4273a5d325e72cff8945.png" alt="2e7099871c59d618e9846f35c133474d.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/7fa4e5ce8d5e4273a5d325e72cff8945.png" alt="2e7099871c59d618e9846f35c133474d.png"></p>
 <p><strong>How UDP scans work?</strong><br>
 A <strong>UDP packet</strong> is sent to every targeted port.For ports such as <strong>53 and 161</strong>, a <strong>protocol-specific payload</strong> is sent to increase response rate, but for most ports the packet is empty unless the --data, --data-string, or --data-length options are specified.</p>
-<p><img src="../../_resources/adb9235e3eda4048bd7c7f87fe502305.png" alt="535d4e920a9def0937b394451f251798.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/adb9235e3eda4048bd7c7f87fe502305.png" alt="535d4e920a9def0937b394451f251798.png"></p>
 <ul>
 <li>
 <p>The most curious element of this table is the <strong>open|filtered state</strong>. Open ports rarely respond to empty probes.</p>
@@ -398,13 +398,13 @@ A <strong>UDP packet</strong> is sent to every targeted port.For ports such as <
 <p>To scan all the UDP ports also we can use the <strong>-sU</strong> option <strong>(root privileges needed).</strong><br>
 To scan both <strong>TCP and UDP</strong> ports we can use <strong>-sS (SYN scan) and -sU (UDP scan)</strong> options.<br>
 Use <strong>-T4 or -T5</strong> to imporve speed and <strong>-sV or -sUV</strong> for service detection with UDP scan.</p>
-<p><img src="../../_resources/24dc1dcf1f58455a9b87a1aa374e6265.png" alt="572de39cf3189c4d146d5470593ab80f.png"></p>
-<p><img src="../../_resources/e3fc43d2681f427d8b4f972c938d0a62.png" alt="4a263aaaa6942534bf93cd9b02c1867a.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/24dc1dcf1f58455a9b87a1aa374e6265.png" alt="572de39cf3189c4d146d5470593ab80f.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/e3fc43d2681f427d8b4f972c938d0a62.png" alt="4a263aaaa6942534bf93cd9b02c1867a.png"></p>
 <p><strong>Scanning Top 10 UDP orts</strong></p>
-<p><img src="../../_resources/fa91e48806234aba8c2e763ab0988559.png" alt="9b450e3add921656ff5d0a86036ddb6d.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/fa91e48806234aba8c2e763ab0988559.png" alt="9b450e3add921656ff5d0a86036ddb6d.png"></p>
 <p><strong>'--top-ports [number]'</strong> option can be used to scan <strong>most common ports</strong> which are usually open.</p>
 <p><strong>False Positives</strong></p>
-<p><img src="../../_resources/4d79429b20cb486bab20670a8e98d8c5.png" alt="76865da62a33c52b68a7973c6b99f864.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/4d79429b20cb486bab20670a8e98d8c5.png" alt="76865da62a33c52b68a7973c6b99f864.png"></p>
 <p>UDP scans may cause a lot of <strong>false positives.</strong>  When a scanned UDP port is closed the system will respond with a <strong>ICMP port unreachable message.</strong> The absence of such packet indicates that the UDP port is open.<br>
 When a <strong>firewall</strong> is present on the target host which blocks the ICMP unreachable message than all UDP ports appear to be open.</p>
 <hr>
@@ -415,7 +415,7 @@ This scan is known as <strong>intense scan</strong> in zenmap. It's good to perf
 <blockquote>
 <p>nmap -v -A -T4 -p- [TARGET]</p>
 </blockquote>
-<p><img src="../../_resources/3e43aff0290b429e8976e28f3e4484d5.png" alt="9f19233e6751cec208b4ef50eaafab92.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/3e43aff0290b429e8976e28f3e4484d5.png" alt="9f19233e6751cec208b4ef50eaafab92.png"></p>
 <p><strong>For Scanning top 1000 UDP ports</strong></p>
 <blockquote>
 <p>nmap -sU -v -A -T4 [TARGET]</p>

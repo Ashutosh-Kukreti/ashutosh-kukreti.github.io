@@ -370,11 +370,11 @@ A zone file is a simple text file stored on a <strong>name server (NS)</strong> 
 <li>define the mail servers for the domain, etc.</li>
 </ul>
 <p><strong>A Zone File with records inside:</strong></p>
-<p><img src="../../_resources/6e5440fbd05e4c2d80aabd442ef573ad.png" alt="e4c64b868ecd2390a83bd02af724555a.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/6e5440fbd05e4c2d80aabd442ef573ad.png" alt="e4c64b868ecd2390a83bd02af724555a.png"></p>
 <p>In short, zone file contains records which contains the mapping.<br>
 DNS uses a combination of record types to ultimately guide users to the right address for the Internet resource.</p>
 <p><strong>Zone file structure:</strong></p>
-<p><img src="../../_resources/383fad486d104006bce7ab35c1b83054.png" alt="108ce99fe2f3307a0d1a46095d53987f.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/383fad486d104006bce7ab35c1b83054.png" alt="108ce99fe2f3307a0d1a46095d53987f.png"></p>
 <p>The field <strong>record class</strong> indicates the namespace of the record information. The most commonly used namespace is that of the Internet, indicated by parameter <strong>IN (stands for internet)</strong>.</p>
 <p>The field <strong>record type</strong> is an abbreviation for the type of information stored in the last field, record data.<strong>Ex:</strong> <strong>an address record</strong> (type A for IPv4, or type AAAA for IPv6 or <strong>a mail exchanger record</strong> (type MX).</p>
 <p>The field <strong>record data</strong> may consist of one or more information elements, depending on the requirements of each record type.<br>
@@ -382,7 +382,7 @@ DNS uses a combination of record types to ultimately guide users to the right ad
 <hr>
 <p><strong>Contents and records</strong></p>
 <p><strong>TTL (Time To Live)</strong></p>
-<p><img src="../../_resources/8716d2492a06481ca59ad8b4e93aece4.png" alt="030269f046db4fb92a7675023e9e91b4.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/8716d2492a06481ca59ad8b4e93aece4.png" alt="030269f046db4fb92a7675023e9e91b4.png"></p>
 <blockquote>
 <p><strong>Dig (Domain Information Groper)</strong> is a network administration command-line tool for querying Domain Name System (DNS) name servers</p>
 </blockquote>
@@ -396,7 +396,7 @@ These records are simple text lines such as:</p>
 <p>Owner    TTL    Class   Type    RDATA</p>
 </blockquote>
 <p>Each of these field must be separated by at least one space.</p>
-<p><img src="../../_resources/29d633a5d2b442bcab1dd1103c55e6a0.png" alt="102a1bcd0fbab19ec7a00b1b07f8fb01.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/29d633a5d2b442bcab1dd1103c55e6a0.png" alt="102a1bcd0fbab19ec7a00b1b07f8fb01.png"></p>
 <ol>
 <li><strong>SOA Records</strong><br>
 Start of Authority (SOA) is a mandatory record in all zone files. It specifies the main properties and characteristics of a zone (domain).<br>
@@ -406,7 +406,7 @@ The SOA record for a zone contains data to control the zone transfer.</li>
 <blockquote>
 <p>NAME     TTL    CLASS   RR   NAMESERVER    EMAIL    SERIALNUMBER   REFRESH   RETRY    EXPIRY    MIN</p>
 </blockquote>
-<p><img src="../../_resources/f2858b685dc74534962ac31f6bbb693a.png" alt="0ad22d6585ef5804a08d92bb8e0f070d.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/f2858b685dc74534962ac31f6bbb693a.png" alt="0ad22d6585ef5804a08d92bb8e0f070d.png"></p>
 <p>NAME:  This specifies the name of the domain.</p>
 <blockquote>
 <p>@ IN SOA <a data-from-md  title='http://ns1.example.com' href='http://ns1.example.com' type=''>ns1.example.com</a>. <a data-from-md  title='http://admin.example.com' href='http://admin.example.com' type=''>admin.example.com</a>.</p>
@@ -428,37 +428,37 @@ Hence <strong>@</strong> means <a data-from-md  title='http://example.com' href=
 <li><strong>NS (NameServer) Records</strong><br>
 Identifies the  authoritative DNS server for the zone.</li>
 </ol>
-<p><img src="../../_resources/8d480ac5dc834ab29e34e8d2abec499b.png" alt="04a625353d8a1f0cdb47d636856810bf.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/8d480ac5dc834ab29e34e8d2abec499b.png" alt="04a625353d8a1f0cdb47d636856810bf.png"></p>
 <ol start="3">
 <li><strong>A Records</strong><br>
 The <strong>A (Address)</strong> record is used to map a domain or subdomain to an  IPv4  address.</li>
 </ol>
-<p><img src="../../_resources/b046f67497734c788bae045773709c69.png" alt="7803d8e57155b6472658dbef0d89749b.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/b046f67497734c788bae045773709c69.png" alt="7803d8e57155b6472658dbef0d89749b.png"></p>
 <p><strong>AAAA records</strong> point to an IPv6 record.</p>
-<p><img src="../../_resources/14d00e1ee513414a8df05571d21311f0.png" alt="c8a374547955d8cad17dedb476154b77.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/14d00e1ee513414a8df05571d21311f0.png" alt="c8a374547955d8cad17dedb476154b77.png"></p>
 <ol start="4">
 <li><strong>CNAME (Canonical name) records</strong><br>
 It maps one domain or subdomain to another domain name.</li>
 </ol>
-<p><img src="../../_resources/4257acf769534da4b6e650165d9893f5.png" alt="7165d005414245d066cae7eb200aa7fc.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/4257acf769534da4b6e650165d9893f5.png" alt="7165d005414245d066cae7eb200aa7fc.png"></p>
 <ol start="5">
 <li><strong>Pointer records (PTR)</strong><br>
 They are like the reverse of A or AAAA records.<br>
 It is used in  reverse DNS records (i.e. from IP address to hostname).</li>
 </ol>
-<p><img src="../../_resources/326c70c8f410461db58e2c2c19a45832.png" alt="a40e83135bfbfe2aa2493f2de3518269.png"></p>
-<p><img src="../../_resources/f4329ad639df48aeb34efe4cf1a115d5.png" alt="6ed78150f69cdbbf1e27f5feabfeb565.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/326c70c8f410461db58e2c2c19a45832.png" alt="a40e83135bfbfe2aa2493f2de3518269.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/f4329ad639df48aeb34efe4cf1a115d5.png" alt="6ed78150f69cdbbf1e27f5feabfeb565.png"></p>
 <ol start="6">
 <li><strong>MX Records</strong><br>
 It directs mail to a specific a mail server responsible for accepting of mail in the zone.</li>
 </ol>
-<p><img src="../../_resources/f091cd55d2bf489da5219c6e32d7db28.png" alt="f26ebbee3a143eb8f6aafe0fe23774ef.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/f091cd55d2bf489da5219c6e32d7db28.png" alt="f26ebbee3a143eb8f6aafe0fe23774ef.png"></p>
 <ol start="7">
 <li><strong>TXT-Records (Descriptive text)</strong><br>
 They are used to hold descriptive text.<br>
 They are often used to hold general information about a domain name such as who is hosting it, contact person, phone numbers, etc.</li>
 </ol>
-<p><img src="../../_resources/4d71468449db474ebeccdb2348c632d9.png" alt="be0518f0d99f51f7d7c602f2365e390b.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/4d71468449db474ebeccdb2348c632d9.png" alt="be0518f0d99f51f7d7c602f2365e390b.png"></p>
 <p><strong>Dig or Nslookup</strong> command can be used to check different DNS records.</p>
 <hr>
 </div></div>

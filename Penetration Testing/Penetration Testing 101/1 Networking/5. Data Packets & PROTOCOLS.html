@@ -378,10 +378,10 @@ A <strong>packet</strong> is also called</p>
 <li>Destination address</li>
 <li>Originating address (source)</li>
 </ul>
-<p><img src="../../_resources/bc6eb92b34eb41e0b158257094ca0a84.png" alt="7456db4b52dc81d45c5a0c70399ca12d.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/bc6eb92b34eb41e0b158257094ca0a84.png" alt="7456db4b52dc81d45c5a0c70399ca12d.png"></p>
 <p><strong>Payload</strong> - is the bulk or body of the packet and carries the actual data.</p>
 <p>If a packet is fixed-length, then the payload may be padded with blank information to make it the right size.</p>
-<p><img src="../../_resources/3f4807fa2ab849ddb7326635c21cf5f7.png" alt="d5a5be304ba31caf19992e4225735eaf.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/3f4807fa2ab849ddb7326635c21cf5f7.png" alt="d5a5be304ba31caf19992e4225735eaf.png"></p>
 <p><strong>Trailer</strong> - also called the footer, typically contains a couple of bits that tell the receiving device that it has reached the end of the packet. It may also have some type of error checking.</p>
 <p>This method of breaking data into smaller pieces (packet) and transmitting it over the network is called <strong>packet switching</strong>.</p>
 <p>The IP packets travel over the internet through nodes (devices and routers) found on the way from the source to the destination. At each node, the router decides to which neighboring node it is more efficient to send the packet.</p>
@@ -392,7 +392,7 @@ A <strong>packet</strong> is also called</p>
 <li>A packet sniffer captures all of the packets of data that pass through a given network interface. In promiscuous mode, all packets travelling through the network will be captured regardless of destination.</li>
 <li>It is used by network or system administrator to monitor and troubleshoot network traffic.</li>
 </ul>
-<p><img src="../../_resources/68b72c966c3e450a8cf9f11098c8b8fb.png" alt="a6cdd8b0e8cf53e11522976bfea3d35b.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/68b72c966c3e450a8cf9f11098c8b8fb.png" alt="a6cdd8b0e8cf53e11522976bfea3d35b.png"></p>
 <p><strong>Attackers can use it for:</strong></p>
 <ul>
 <li>To capture username and passwords and authentication tokens (if transmitted in clear or plain text - means unencrypted)</li>
@@ -423,7 +423,7 @@ It is like a <strong>spoken language.</strong> If two hardware devices support t
 <li><strong>Application layer</strong> - HTTP, IMAP, FTP, etc.</li>
 </ul>
 <p><strong>Ex</strong>: UDP Encapsulation</p>
-<p><img src="../../_resources/34abc582cd4e4f9a896ecc3be7f3c5dc.png" alt="367cef06641e3aa62b1ee13b40058afa.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/34abc582cd4e4f9a896ecc3be7f3c5dc.png" alt="367cef06641e3aa62b1ee13b40058afa.png"></p>
 <ul>
 <li><strong>Link layer protocols</strong> establish communication between devices at a <strong>hardware level</strong>. In order to transmit data from one device to another, each device's hardware must support the same link layer protocol.</li>
 <li><strong>Internet layer protocols</strong> are used to initiate data transfers and route them over the Internet.</li>
@@ -455,11 +455,11 @@ It is used by network devices to <strong>diagnose network communication</strong>
 <li>Each <strong>IP packet</strong> that you send on the internet has got a field called as <strong>TTL</strong>. TTL stands for <strong>Time To Live</strong>.TTL is not measured by the <em>num of seconds</em> but by the <em>num of hops</em>. Its the <strong>maximum number of hops</strong> that a packet can travel through across the internet, before it is discarded.</li>
 <li>TTL value is set by the sender inside his IP packet (happens under the hood).If the <strong>destination is not found</strong> TTL value becomes <em>0</em> (which means no further travel) the receiving router will drop the packet and informs the original sender.</li>
 </ul>
-<p><img src="../../_resources/9e1c23fa008c49baa349ea8893b9dbc5.png" alt="cc73f56b2f34125114a62884101c5318.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/9e1c23fa008c49baa349ea8893b9dbc5.png" alt="cc73f56b2f34125114a62884101c5318.png"></p>
 <ul>
 <li>Each router that comes in between the source and destination will go on reducing the TTL value before sending to the next router. It means if a packet has TTL value of 30, then the first router will reduce it to 29 and then send that to the next router.The router which <strong>discards</strong> the packet will inform the original sender that the <strong>TTL value has exceeded</strong></li>
 </ul>
-<p><img src="../../_resources/2fdbbb6fcfbe4800a386634a4364c31c.png" alt="1affe8b9eded2b4c4de7f7ce234a7e90.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/2fdbbb6fcfbe4800a386634a4364c31c.png" alt="1affe8b9eded2b4c4de7f7ce234a7e90.png"></p>
 <ul>
 <li>
 <p>If you receive '* * *<em>', this could mean that the router in the path<br>
@@ -472,8 +472,8 @@ After a '</em> * * *' within the path, traceroute will still increase the TTL by
 <p>Traceroute will use <strong>ICMPv6 Packets</strong> if normal ICMP packets which works with IPv4 will not be able to reach the destination(Port).</p>
 </li>
 </ul>
-<p><img src="../../_resources/7d5a6b3cefeb4e0d975f1bf3cfc4f727.png" alt="47e3c990feb7354719dedc0607f6ab9f.png"></p>
-<p><img src="../../_resources/17ac335808f0452c94d5ba86a1e7a496.png" alt="6231052a078986c5cd12727b67d2afd0.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/7d5a6b3cefeb4e0d975f1bf3cfc4f727.png" alt="47e3c990feb7354719dedc0607f6ab9f.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/17ac335808f0452c94d5ba86a1e7a496.png" alt="6231052a078986c5cd12727b67d2afd0.png"></p>
 <ol start="2">
 <li><strong>Ping</strong> - The ping utility is a simplified version of traceroute,use to <strong>test speed</strong> of the connection.(&lt;30ms - fast, 30-50ms -average).It also tell us about <em>packet loss</em>.It utilizes the <strong>Echo Request</strong> and <strong>Echo Reply</strong> ICMP messages to determine if an IP address is <em>reachable</em> and <em>responding</em>. Unfortunately network attacks can exploit this process,such as the ICMP Flood Attack and the Ping of Death attack.</li>
 </ol>
@@ -484,7 +484,7 @@ The ping command <strong>first sends</strong> an <em>echo request packet</em> to
 <li>The destination is able to get an <em>echo reply back</em> to the source within a predetermined time called a timeout.<br>
 <strong>Ex</strong>: The default value of this timeout is two seconds on Cisco routers.</li>
 </ul>
-<p><img src="../../_resources/0a1833b127f44b93a984288b82ace4f1.png" alt="47c1dffd80ecff7bfbb8f5549f7ad270.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/0a1833b127f44b93a984288b82ace4f1.png" alt="47c1dffd80ecff7bfbb8f5549f7ad270.png"></p>
 <hr>
 </div></div>
 					</body>

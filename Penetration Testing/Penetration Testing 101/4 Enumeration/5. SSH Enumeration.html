@@ -387,7 +387,7 @@ The <strong>first time</strong> you receive the server's public key, you'll be a
 <li><strong>Nmap Scripts:</strong><br>
 <strong>Note:</strong> use <strong>verbosity (-v)</strong> with these scripts for better output.</li>
 </ul>
-<p><img src="../../_resources/e0385b8f415d4f0c893092aca0dde786.png" alt="9b27cf70367471c9c50515cc00b49cef.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/e0385b8f415d4f0c893092aca0dde786.png" alt="9b27cf70367471c9c50515cc00b49cef.png"></p>
 <ol>
 <li>
 <p><strong>ssh-auth-methods</strong> - Returns <strong>authentication methods</strong> that a SSH server supports by authenticating using a username.</p>
@@ -409,8 +409,8 @@ If <strong>no keys</strong> are given it will check list of known <strong>static
 <p><strong>sshv1</strong> - Checks if  the server supports SSH Version 1</p>
 </li>
 </ol>
-<p><img src="../../_resources/d1dbe8fb8c4f4921aa2bdb08ea50e9be.png" alt="4c73e3d5fe83845fdabda8184e254150.png"></p>
-<p><img src="../../_resources/467a756350514dddb24a61775f212f44.png" alt="b7c3ca35380582a91cd473e6a05e8483.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/d1dbe8fb8c4f4921aa2bdb08ea50e9be.png" alt="4c73e3d5fe83845fdabda8184e254150.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/467a756350514dddb24a61775f212f44.png" alt="b7c3ca35380582a91cd473e6a05e8483.png"></p>
 <ul>
 <li><strong>Metasploit Modules</strong></li>
 </ul>
@@ -418,7 +418,7 @@ If <strong>no keys</strong> are given it will check list of known <strong>static
 <blockquote>
 <p>search auxiliary/ssh/scanner</p>
 </blockquote>
-<p><img src="../../_resources/074d58ed55d34ccd870c6483b8ec946f.png" alt="f47ff7e178de10fcc13a0bc2c2e79799.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/074d58ed55d34ccd870c6483b8ec946f.png" alt="f47ff7e178de10fcc13a0bc2c2e79799.png"></p>
 <ol>
 <li><strong>ssh_login</strong> - It will <strong>test a set of credentials</strong> for SSH against a target and it can also be used to <strong>perform brute force login</strong> attempts by providing  a <strong>USERPASS_FILE (list of username and passwords)</strong></li>
 </ol>
@@ -426,17 +426,17 @@ If <strong>no keys</strong> are given it will check list of known <strong>static
 <blockquote>
 <p>ls /opt/metasploit-framework/data/wordlists</p>
 </blockquote>
-<p><img src="../../_resources/e51bb86fe7fe4f4eaf81309e8313e3b7.png" alt="356f8c3106c7fd8fc394fdeb9d691276.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/e51bb86fe7fe4f4eaf81309e8313e3b7.png" alt="356f8c3106c7fd8fc394fdeb9d691276.png"></p>
 <p>From this directory we will use <strong>root_userpass.txt files</strong><br>
 It contains <strong>usernames and passowrds.</strong> Which we will use to <strong>bruteforce</strong> the SSH service.</p>
 <p><strong>Print file contents</strong></p>
 <blockquote>
 <p>cat root_userpass.txt</p>
 </blockquote>
-<p><img src="../../_resources/f936b1148e11443c9772172d69fa427e.png" alt="d29fa9db908e0e946902c5d8a7cc6099.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/f936b1148e11443c9772172d69fa427e.png" alt="d29fa9db908e0e946902c5d8a7cc6099.png"></p>
 <p>Edit it to include <strong>user= msfadmin,  password=msfadmin</strong></p>
-<p><img src="../../_resources/d0d816ca9e0c43788bf65f3f04c13b90.png" alt="627a88e041df370ea7e934fdc29f0b7a.png"></p>
-<p><img src="../../_resources/33efdb631d934dc1b6a61d5786b96002.png" alt="b2ad0eb7eb5e72ae392f70c3526a8510.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/d0d816ca9e0c43788bf65f3f04c13b90.png" alt="627a88e041df370ea7e934fdc29f0b7a.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/33efdb631d934dc1b6a61d5786b96002.png" alt="b2ad0eb7eb5e72ae392f70c3526a8510.png"></p>
 <p>Here we <strong>gain accesss (shell) to Metasploitbale2</strong> through <em>msfadmin</em> user and pass.<br>
 It's opened on <strong>session 4</strong>.<br>
 We can send session to <strong>background</strong> using Ctrl + C and<br>
@@ -447,26 +447,26 @@ access it again using</p>
 <ol start="2">
 <li><strong>ssh_version</strong></li>
 </ol>
-<p><img src="../../_resources/deeef33224864a7aa628fb1f3933e818.png" alt="fba7f0b498287d4e297e1d6a189832e3.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/deeef33224864a7aa628fb1f3933e818.png" alt="fba7f0b498287d4e297e1d6a189832e3.png"></p>
 <ol start="3">
 <li><strong>ssh_enumusers</strong></li>
 </ol>
-<p><img src="../../_resources/69ea505f190c4ce88a176bac24c726c1.png" alt="78a5ced4df5c4f5047ec7bbf15ac283b.png"></p>
-<p><img src="../../_resources/f1843da1779d4707ad3425895836b1e7.png" alt="d641b464ace4cf023328d96dbf4fde7b.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/69ea505f190c4ce88a176bac24c726c1.png" alt="78a5ced4df5c4f5047ec7bbf15ac283b.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/f1843da1779d4707ad3425895836b1e7.png" alt="d641b464ace4cf023328d96dbf4fde7b.png"></p>
 <p>Now we will use <strong>unix_users.txt</strong> (conatining usernames) file  from wordlist directory for enumeration.</p>
-<p><img src="../../_resources/d6939cccc9c34b86ba842cded4f553a0.png" alt="46d9244de538fb14a5e7838dfcb917c3.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/d6939cccc9c34b86ba842cded4f553a0.png" alt="46d9244de538fb14a5e7838dfcb917c3.png"></p>
 <p>To <strong>print all the usernames (public) and passwords (private)</strong> we found with ssh we will use <strong>creds</strong> command.</p>
 <blockquote>
 <p>creds -s [SERVICE NAME] [HOST IP]</p>
 </blockquote>
-<p><img src="../../_resources/b0598dac556649d3b6488d346a0f16f2.png" alt="b114bb4ecca8e6ef571583600b6e3e4f.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/b0598dac556649d3b6488d346a0f16f2.png" alt="b114bb4ecca8e6ef571583600b6e3e4f.png"></p>
 <hr>
 <p><strong>Viewing Metasploitable2 SSH logs</strong><br>
 As per above <strong>module (ssh_enumusers)</strong> invalid names will be logged.<br>
 The logs are located at <strong>/var/log</strong> directory in <strong>auth.log</strong> file.<br>
 Connect to Metasploitable2 using <strong>SSH or Telnet</strong> and use following commands to see the logs.</p>
-<p><img src="../../_resources/fa1327876ca04a6db59bbe309a593701.png" alt="c531553ef4cc34833c44c4a0b6b6b1f7.png"></p>
-<p><img src="../../_resources/536a180d132f431685065cff7075c785.png" alt="167bd34dbd314bfc229748bfbe47c58a.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/fa1327876ca04a6db59bbe309a593701.png" alt="c531553ef4cc34833c44c4a0b6b6b1f7.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/536a180d132f431685065cff7075c785.png" alt="167bd34dbd314bfc229748bfbe47c58a.png"></p>
 <p>As we can see everything we had done till now is logged.</p>
 <hr>
 </div></div>

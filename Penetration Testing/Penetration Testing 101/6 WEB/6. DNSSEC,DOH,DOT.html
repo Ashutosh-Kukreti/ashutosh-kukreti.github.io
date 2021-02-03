@@ -359,7 +359,7 @@
 			}
 		}
 	</style><div id="rendered-md"><p>DNS is <strong>plain-text UDP</strong> with no assurance of authenticity or integrity of the data.</p>
-<p><img src="../../_resources/f1637ef0748a4b7faa3c7e12216fcbcb.png" alt="73d499447c004cc850f9ebbf47eb10e4.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/f1637ef0748a4b7faa3c7e12216fcbcb.png" alt="73d499447c004cc850f9ebbf47eb10e4.png"></p>
 <p><strong>Flaws:</strong></p>
 <ul>
 <li>Privacy of data collected on the name servers, any query sent to the resolver is necessarily visible to the resolver.</li>
@@ -368,7 +368,7 @@
 </ul>
 <hr>
 <p><strong>DNSSEC (DNS Security Extensions)</strong></p>
-<p><img src="../../_resources/9df80252e63c480c9db2ad88f80d4598.png" alt="c381a44758a0839fad714c58391eefd6.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/9df80252e63c480c9db2ad88f80d4598.png" alt="c381a44758a0839fad714c58391eefd6.png"></p>
 <p>DNSSEC creates a secure DNS by adding <strong>cryptographic signatures</strong> to existing DNS records.<br>
 These <strong>digital signatures</strong> are stored in DNS name servers alongside common record types like A, AAAA, MX, CNAME, etc.<br>
 They verify that a requested DNS record comes from its authoritative name server and wasn’t altered en-route.</p>
@@ -376,14 +376,14 @@ They verify that a requested DNS record comes from its authoritative name server
 <p>It also secure threats to DNS including stealing DNS admin credentials and changing zone files,Denial of Service (DoS) attacks,DNS spoofing but <strong>the communication is still sent in cleartext.</strong></p>
 <hr>
 <p><strong>DoT (DNS Over TLS)</strong></p>
-<p><img src="../../_resources/c28e99c6c4b24021bc235e3837666880.png" alt="d2a40a0dbc1c2d118638f3dcf48bb672.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/c28e99c6c4b24021bc235e3837666880.png" alt="d2a40a0dbc1c2d118638f3dcf48bb672.png"></p>
 <p>It wraps DNS queries and answers (DNS traffic) via the Transport Layer Security (TLS) protocol.<br>
 It uses <strong>TCP port 853.</strong></p>
-<p><img src="../../_resources/a2ab84e133fb42a69220167eff3739f8.png" alt="502ac31ffbc7c7cc2e5823c6ae792ef5.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/a2ab84e133fb42a69220167eff3739f8.png" alt="502ac31ffbc7c7cc2e5823c6ae792ef5.png"></p>
 <p><strong>Weakness:</strong> It only addresses encryption on a system resolver level and works only on one port. Target the traffic between the resolver and the nameservers or block the port and DoT is over.</p>
 <hr>
 <p><strong>DoH (DNS Over HTTPS)</strong></p>
-<p><img src="../../_resources/ec76b1e6b2ee43529415171bcbbd7a5a.png" alt="d2850891024ee9d5b80595b10a5a148a.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/ec76b1e6b2ee43529415171bcbbd7a5a.png" alt="d2850891024ee9d5b80595b10a5a148a.png"></p>
 <p>In it DNS traffic is mixed in with regular HTTPS traffic. HTTPS uses TLS to.<br>
 DoH was specifically designed as a solution for web applications (i.e., <strong>browsers</strong>)</p>
 <hr>

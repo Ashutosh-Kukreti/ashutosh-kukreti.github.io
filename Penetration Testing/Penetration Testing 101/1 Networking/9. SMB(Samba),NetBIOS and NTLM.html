@@ -361,9 +361,9 @@
 	</style><div id="rendered-md"><p>Server Message Block (SMB)<br>
 It is a network communication protocol for providing shared access to files, printers,named pipe (Pipes are a way of streaming data between applications) and serial ports between nodes on a network (LAN).It uses Application Layer. It is the most exploited service , recent one -EternalBlue exploit used in <strong>wannacry ransomware attack (2017)</strong>.</p>
 <p>It uses <strong>TCP/IP port 445</strong>.</p>
-<p><img src="../../_resources/d5db0246be534ce9b963b685440444df.png" alt="5855696682d81abd5b4b3645b65ee16f.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/d5db0246be534ce9b963b685440444df.png" alt="5855696682d81abd5b4b3645b65ee16f.png"></p>
 <p><strong>Note:</strong> <strong>CIFS(Common Internet File System)</strong> is a particular implementation of the SMB protocol, created by Microsoft. It is no longer used.</p>
-<p><img src="../../_resources/f73fa5b950654d3d9d496abf21cb5687.png" alt="2414d3968236fe178ab5beacb02a55d3.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/f73fa5b950654d3d9d496abf21cb5687.png" alt="2414d3968236fe178ab5beacb02a55d3.png"></p>
 <p>With SMB clients connect to servers via <strong>TCP/IP or NetBIOS</strong>. Once they have established a connection, the clients can send commands to access shares, read and write files and access printers.</p>
 <p><strong>Working</strong></p>
 <p>SMB uses <strong>four types</strong> of messages:</p>
@@ -404,7 +404,7 @@ Versions</p>
 </ul>
 <hr>
 <p><strong>NetBIOS</strong></p>
-<p><img src="../../_resources/4d2cd72571f04c8c8015609f21d3e3e8.png" alt="e3045c2f1db4726b3065f5b271c33888.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/4d2cd72571f04c8c8015609f21d3e3e8.png" alt="e3045c2f1db4726b3065f5b271c33888.png"></p>
 <p><strong>NetBIOS (Network Basic Input/Output System)</strong> allows applications and computers to communicate over a LAN for sharing files and printers.</p>
 <p>It is often used over TCP/IP protocol <strong>(NetBT)</strong>. It is not a networking protocol, it is an <strong>API</strong>.</p>
 <p><strong>NetBEUI (NetBios Extended User Interface)</strong>- an enhanced version of the NetBIOS protocol used by network operating systems like Windows 95 and Windows NT.</p>
@@ -438,18 +438,18 @@ It uses same ports as SMB.</p>
 <p><strong>NT LAN Manager(NTLM)</strong><br>
 &quot;NT&quot; refers to <strong>&quot;new technology&quot;</strong>.<br>
 The NTLM protocol was the default protocol for network authentication in Windows before it was replaced with <strong>Kerberos</strong> starting Windows 2000.</p>
-<p><img src="../../_resources/9db67abed8bb44e0bef751c597b73715.png" alt="85e9c63faf131f6d2a5d7b9192eab35f.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/9db67abed8bb44e0bef751c597b73715.png" alt="85e9c63faf131f6d2a5d7b9192eab35f.png"></p>
 <p>NTLM was introduced in 1993 with Windows NT 3.1 and was later improved in a second version (NTLMv2) in Windows NT 4.0.<br>
 NTLMv2 had some security improvements around strength of cryptography, but some of its flaws remained.</p>
 <p><strong>Working</strong></p>
-<p><img src="../../_resources/bc7e64516f8f4d5391d3258e020d2a94.png" alt="5c5ce99ae4ad37e21a225ae7eea064a0.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/bc7e64516f8f4d5391d3258e020d2a94.png" alt="5c5ce99ae4ad37e21a225ae7eea064a0.png"></p>
 <p><strong>nonce</strong> - Number used no more than once</p>
 <p>NTLM uses a <strong>challenge-response mechanism</strong> for authentication, in which clients are able to prove their identities without sending a password to the server.</p>
 <p>It consists of <strong>three messages</strong>:<br>
 <strong>Type 1</strong> (negotiation),<br>
 <strong>Type 2</strong> (challenge) and<br>
 <strong>Type 3</strong> (authentication).</p>
-<p><img src="../../_resources/14375531eb3e4473bc0bc7ae2313bfee.png" alt="630b7d735c6f98fccdd72dbc2ca1e7ee.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/14375531eb3e4473bc0bc7ae2313bfee.png" alt="630b7d735c6f98fccdd72dbc2ca1e7ee.png"></p>
 <p><strong>NTLM over SMB</strong> protocol is used to authenticate client's connection to SMB servers. It is easily exploitable.</p>
 <hr>
 </div></div>

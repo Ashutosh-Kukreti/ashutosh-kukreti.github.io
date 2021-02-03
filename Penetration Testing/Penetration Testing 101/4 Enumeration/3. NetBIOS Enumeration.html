@@ -362,17 +362,17 @@
 <p>This service uses a <strong>unique 16 ASCII</strong> character string in order to identify the network devices over TCP/IP.<br>
 <strong>First 15 characters</strong> - identify Devices<br>
 <strong>16th character</strong> - identify the service</p>
-<p><img src="../../_resources/42d46c9d8cc94f468b5094ceec55fd73.png" alt="9eae9da05755011cead35c931eb55019.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/42d46c9d8cc94f468b5094ceec55fd73.png" alt="9eae9da05755011cead35c931eb55019.png"></p>
 <p><strong>Workgroup:</strong> It is a <strong>peer-to-peer</strong> network for a maximum of 10 computers in the same LAN or subnet. It has no <strong>Centralized Administration</strong>, which means no computer has control over another computer. Each user controls the resources and security locally on their system.</p>
 <p><strong>Domain:</strong> It is a <strong>client/server</strong> network for up to 2000 computers anywhere in the world. The administrator manages the domain and its users and resources. A user with an account on the domain can <strong>log onto any</strong> computer system, without having the account on that computer.</p>
-<p><img src="../../_resources/959f6972448a43ab9e93009f4d782c42.png" alt="71396ea46a9a7d469579961d0864c774.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/959f6972448a43ab9e93009f4d782c42.png" alt="71396ea46a9a7d469579961d0864c774.png"></p>
 <ul>
 <li><strong>Microsoft Remote Procedure Call</strong> between client and server to listen to the query of the client. Basically, it is used for communication between <strong>client- client</strong> and <strong>server -client</strong> for sending messages.</li>
 <li><strong>Name service (NetBIOS-NS)</strong> for name registration and resolution</li>
 <li><strong>Datagram distribution service (NetBIOS-DGM)</strong> for connection less communication</li>
 <li><strong>Session service (NetBIOS-SSN)</strong> for connection-oriented communication</li>
 </ul>
-<p><img src="../../_resources/29548716d56644319a4695833bb30450.png" alt="1302557869105397916a0b14eb13c7c9.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/29548716d56644319a4695833bb30450.png" alt="1302557869105397916a0b14eb13c7c9.png"></p>
 <hr>
 <p><strong>Enumeration</strong></p>
 <ol>
@@ -383,8 +383,8 @@ It is for <strong>Windows only</strong>.On linux <strong>nmblookup</strong> can 
 <p>nbstat -A [TARGET]<br>
 Display NetBIOS name table,MAC address information</p>
 </blockquote>
-<p><img src="../../_resources/c329d923505d451f8f3f0afe08e04f84.png" alt="861319490bd7f9711b5357ead83540ad.png"></p>
-<p><img src="../../_resources/71b6fd5eee2e4a6883c75af7f2ebf8fb.png" alt="9e6a6e7eb6e8621b926b3beab80b0a5e.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/c329d923505d451f8f3f0afe08e04f84.png" alt="861319490bd7f9711b5357ead83540ad.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/71b6fd5eee2e4a6883c75af7f2ebf8fb.png" alt="9e6a6e7eb6e8621b926b3beab80b0a5e.png"></p>
 <ol start="2">
 <li><strong>netview</strong> - This utility is used to <strong>enumerate shared resources</strong> and displays a list of domains, computers, or resources that are being shared by the specified computer.<br>
 It also works on <strong>Windows only</strong>.</li>
@@ -392,8 +392,8 @@ It also works on <strong>Windows only</strong>.</li>
 <blockquote>
 <p>net view [\\ComputerName or IP [/CACHE] | [/ALL] | /DOMAIN[:DomainName]]</p>
 </blockquote>
-<p><img src="../../_resources/c8845a6fccf04092b30a37de78e2d907.png" alt="771cb599b9bb55a709161438039139cf.png"></p>
-<p><img src="../../_resources/8d51c2ed83264577bdb1b996e109451c.png" alt="43dd2e4bc329dd8c632332513ca5ec55.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/c8845a6fccf04092b30a37de78e2d907.png" alt="771cb599b9bb55a709161438039139cf.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/8d51c2ed83264577bdb1b996e109451c.png" alt="43dd2e4bc329dd8c632332513ca5ec55.png"></p>
 <hr>
 <p><strong>Enumerating NetBIOS in Metasploitable2</strong></p>
 <ol>
@@ -402,11 +402,11 @@ It also works on <strong>Windows only</strong>.</li>
 <ul>
 <li><strong>nbstat</strong> - Attempts to retrieve the target's <strong>NetBIOS names and MAC address</strong>.To display all names use <strong>verbose(-v)</strong>.</li>
 </ul>
-<p><img src="../../_resources/66253f21d2d44429826c474be3f4cfea.png" alt="61250d6138efc09892c0c5d75723529a.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/66253f21d2d44429826c474be3f4cfea.png" alt="61250d6138efc09892c0c5d75723529a.png"></p>
 <p><strong>T</strong> - TCP Connect scan<br>
 <strong>U</strong> - UDP scan<br>
 <strong>V</strong> - Version Detection</p>
-<p><img src="../../_resources/4746d8f1a5474d78af8425f1675bcc0c.png" alt="c7d1ce160a746eeae76f276ceacac84f.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/4746d8f1a5474d78af8425f1675bcc0c.png" alt="c7d1ce160a746eeae76f276ceacac84f.png"></p>
 <p><strong>NetBIOS Suffixes</strong><br>
 NetBIOS <strong>End Character</strong> (endchar)= the <strong>16th character</strong> of a NetBIOS name.</p>
 <p><strong>For unique names:</strong><br>
@@ -426,14 +426,14 @@ Once a computer is elected, it will keep track of what machines are connected to
 <ul>
 <li><strong>broadcast-netbios-master-browser</strong> - It discovers <strong>master browsers</strong> and the <strong>domains</strong> they manage.</li>
 </ul>
-<p><img src="../../_resources/4812e0b614584381bd0757ae77089731.png" alt="057f6a75d1587941182dbf4a9065e35d.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/4812e0b614584381bd0757ae77089731.png" alt="057f6a75d1587941182dbf4a9065e35d.png"></p>
 <ol start="2">
 <li><strong>Metasploit modules</strong></li>
 </ol>
 <ul>
 <li><strong>nbname</strong> - Discover <strong>host information</strong> through NetBIOS.</li>
 </ul>
-<p><img src="../../_resources/6cf37a7624414afeb72db96529304d42.png" alt="034669448ef9f2aa854f0b83d3b68df2.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/6cf37a7624414afeb72db96529304d42.png" alt="034669448ef9f2aa854f0b83d3b68df2.png"></p>
 <p><strong>Note:</strong></p>
 <ul>
 <li>
@@ -448,17 +448,17 @@ Once a computer is elected, it will keep track of what machines are connected to
 <p>This service uses a <strong>unique 16 ASCII</strong> character string in order to identify the network devices over TCP/IP.<br>
 <strong>First 15 characters</strong> - identify Devices<br>
 <strong>16th character</strong> - identify the service</p>
-<p><img src="../../_resources/42d46c9d8cc94f468b5094ceec55fd73.png" alt="9eae9da05755011cead35c931eb55019.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/42d46c9d8cc94f468b5094ceec55fd73.png" alt="9eae9da05755011cead35c931eb55019.png"></p>
 <p><strong>Workgroup:</strong> It is a <strong>peer-to-peer</strong> network for a maximum of 10 computers in the same LAN or subnet. It has no <strong>Centralized Administration</strong>, which means no computer has control over another computer. Each user controls the resources and security locally on their system.</p>
 <p><strong>Domain:</strong> It is a <strong>client/server</strong> network for up to 2000 computers anywhere in the world. The administrator manages the domain and its users and resources. A user with an account on the domain can <strong>log onto any</strong> computer system, without having the account on that computer.</p>
-<p><img src="../../_resources/959f6972448a43ab9e93009f4d782c42.png" alt="71396ea46a9a7d469579961d0864c774.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/959f6972448a43ab9e93009f4d782c42.png" alt="71396ea46a9a7d469579961d0864c774.png"></p>
 <ul>
 <li><strong>Microsoft Remote Procedure Call</strong> between client and server to listen to the query of the client. Basically, it is used for communication between <strong>client- client</strong> and <strong>server -client</strong> for sending messages.</li>
 <li><strong>Name service (NetBIOS-NS)</strong> for name registration and resolution</li>
 <li><strong>Datagram distribution service (NetBIOS-DGM)</strong> for connection less communication</li>
 <li><strong>Session service (NetBIOS-SSN)</strong> for connection-oriented communication</li>
 </ul>
-<p><img src="../../_resources/29548716d56644319a4695833bb30450.png" alt="1302557869105397916a0b14eb13c7c9.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/29548716d56644319a4695833bb30450.png" alt="1302557869105397916a0b14eb13c7c9.png"></p>
 <hr>
 <p><strong>Enumeration</strong></p>
 <ol>
@@ -469,8 +469,8 @@ It is for <strong>Windows only</strong>.On linux <strong>nmblookup</strong> can 
 <p>nbstat -A [TARGET]<br>
 Display NetBIOS name table,MAC address information</p>
 </blockquote>
-<p><img src="../../_resources/c329d923505d451f8f3f0afe08e04f84.png" alt="861319490bd7f9711b5357ead83540ad.png"></p>
-<p><img src="../../_resources/71b6fd5eee2e4a6883c75af7f2ebf8fb.png" alt="9e6a6e7eb6e8621b926b3beab80b0a5e.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/c329d923505d451f8f3f0afe08e04f84.png" alt="861319490bd7f9711b5357ead83540ad.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/71b6fd5eee2e4a6883c75af7f2ebf8fb.png" alt="9e6a6e7eb6e8621b926b3beab80b0a5e.png"></p>
 <ol start="2">
 <li><strong>netview</strong> - This utility is used to <strong>enumerate shared resources</strong> and displays a list of domains, computers, or resources that are being shared by the specified computer.<br>
 It also works on <strong>Windows only</strong>.</li>
@@ -478,8 +478,8 @@ It also works on <strong>Windows only</strong>.</li>
 <blockquote>
 <p>net view [\\ComputerName or IP [/CACHE] | [/ALL] | /DOMAIN[:DomainName]]</p>
 </blockquote>
-<p><img src="../../_resources/c8845a6fccf04092b30a37de78e2d907.png" alt="771cb599b9bb55a709161438039139cf.png"></p>
-<p><img src="../../_resources/8d51c2ed83264577bdb1b996e109451c.png" alt="43dd2e4bc329dd8c632332513ca5ec55.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/c8845a6fccf04092b30a37de78e2d907.png" alt="771cb599b9bb55a709161438039139cf.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/8d51c2ed83264577bdb1b996e109451c.png" alt="43dd2e4bc329dd8c632332513ca5ec55.png"></p>
 <hr>
 <p><strong>Enumerating NetBIOS in Metasploitable2</strong></p>
 <ol>
@@ -488,11 +488,11 @@ It also works on <strong>Windows only</strong>.</li>
 <ul>
 <li><strong>nbstat</strong> - Attempts to retrieve the target's <strong>NetBIOS names and MAC address</strong>.To display all names use <strong>verbose(-v)</strong>.</li>
 </ul>
-<p><img src="../../_resources/66253f21d2d44429826c474be3f4cfea.png" alt="61250d6138efc09892c0c5d75723529a.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/66253f21d2d44429826c474be3f4cfea.png" alt="61250d6138efc09892c0c5d75723529a.png"></p>
 <p><strong>T</strong> - TCP Connect scan<br>
 <strong>U</strong> - UDP scan<br>
 <strong>V</strong> - Version Detection</p>
-<p><img src="../../_resources/4746d8f1a5474d78af8425f1675bcc0c.png" alt="c7d1ce160a746eeae76f276ceacac84f.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/4746d8f1a5474d78af8425f1675bcc0c.png" alt="c7d1ce160a746eeae76f276ceacac84f.png"></p>
 <p><strong>NetBIOS Suffixes</strong><br>
 NetBIOS <strong>End Character</strong> (endchar)= the <strong>16th character</strong> of a NetBIOS name.</p>
 <p><strong>For unique names:</strong><br>
@@ -512,14 +512,14 @@ Once a computer is elected, it will keep track of what machines are connected to
 <ul>
 <li><strong>broadcast-netbios-master-browser</strong> - It discovers <strong>master browsers</strong> and the <strong>domains</strong> they manage.</li>
 </ul>
-<p><img src="../../_resources/4812e0b614584381bd0757ae77089731.png" alt="057f6a75d1587941182dbf4a9065e35d.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/4812e0b614584381bd0757ae77089731.png" alt="057f6a75d1587941182dbf4a9065e35d.png"></p>
 <ol start="2">
 <li><strong>Metasploit modules</strong></li>
 </ol>
 <ul>
 <li><strong>nbname</strong> - Discover <strong>host information</strong> through NetBIOS.</li>
 </ul>
-<p><img src="../../_resources/6cf37a7624414afeb72db96529304d42.png" alt="034669448ef9f2aa854f0b83d3b68df2.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/6cf37a7624414afeb72db96529304d42.png" alt="034669448ef9f2aa854f0b83d3b68df2.png"></p>
 <p><strong>Note:</strong></p>
 <ul>
 <li>
@@ -534,17 +534,17 @@ Once a computer is elected, it will keep track of what machines are connected to
 <p>This service uses a <strong>unique 16 ASCII</strong> character string in order to identify the network devices over TCP/IP.<br>
 <strong>First 15 characters</strong> - identify Devices<br>
 <strong>16th character</strong> - identify the service</p>
-<p><img src="../../_resources/42d46c9d8cc94f468b5094ceec55fd73.png" alt="9eae9da05755011cead35c931eb55019.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/42d46c9d8cc94f468b5094ceec55fd73.png" alt="9eae9da05755011cead35c931eb55019.png"></p>
 <p><strong>Workgroup:</strong> It is a <strong>peer-to-peer</strong> network for a maximum of 10 computers in the same LAN or subnet. It has no <strong>Centralized Administration</strong>, which means no computer has control over another computer. Each user controls the resources and security locally on their system.</p>
 <p><strong>Domain:</strong> It is a <strong>client/server</strong> network for up to 2000 computers anywhere in the world. The administrator manages the domain and its users and resources. A user with an account on the domain can <strong>log onto any</strong> computer system, without having the account on that computer.</p>
-<p><img src="../../_resources/959f6972448a43ab9e93009f4d782c42.png" alt="71396ea46a9a7d469579961d0864c774.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/959f6972448a43ab9e93009f4d782c42.png" alt="71396ea46a9a7d469579961d0864c774.png"></p>
 <ul>
 <li><strong>Microsoft Remote Procedure Call</strong> between client and server to listen to the query of the client. Basically, it is used for communication between <strong>client- client</strong> and <strong>server -client</strong> for sending messages.</li>
 <li><strong>Name service (NetBIOS-NS)</strong> for name registration and resolution</li>
 <li><strong>Datagram distribution service (NetBIOS-DGM)</strong> for connection less communication</li>
 <li><strong>Session service (NetBIOS-SSN)</strong> for connection-oriented communication</li>
 </ul>
-<p><img src="../../_resources/29548716d56644319a4695833bb30450.png" alt="1302557869105397916a0b14eb13c7c9.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/29548716d56644319a4695833bb30450.png" alt="1302557869105397916a0b14eb13c7c9.png"></p>
 <hr>
 <p><strong>Enumeration</strong></p>
 <ol>
@@ -555,8 +555,8 @@ It is for <strong>Windows only</strong>.On linux <strong>nmblookup</strong> can 
 <p>nbstat -A [TARGET]<br>
 Display NetBIOS name table,MAC address information</p>
 </blockquote>
-<p><img src="../../_resources/c329d923505d451f8f3f0afe08e04f84.png" alt="861319490bd7f9711b5357ead83540ad.png"></p>
-<p><img src="../../_resources/71b6fd5eee2e4a6883c75af7f2ebf8fb.png" alt="9e6a6e7eb6e8621b926b3beab80b0a5e.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/c329d923505d451f8f3f0afe08e04f84.png" alt="861319490bd7f9711b5357ead83540ad.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/71b6fd5eee2e4a6883c75af7f2ebf8fb.png" alt="9e6a6e7eb6e8621b926b3beab80b0a5e.png"></p>
 <ol start="2">
 <li><strong>netview</strong> - This utility is used to <strong>enumerate shared resources</strong> and displays a list of domains, computers, or resources that are being shared by the specified computer.<br>
 It also works on <strong>Windows only</strong>.</li>
@@ -564,8 +564,8 @@ It also works on <strong>Windows only</strong>.</li>
 <blockquote>
 <p>net view [\\ComputerName or IP [/CACHE] | [/ALL] | /DOMAIN[:DomainName]]</p>
 </blockquote>
-<p><img src="../../_resources/c8845a6fccf04092b30a37de78e2d907.png" alt="771cb599b9bb55a709161438039139cf.png"></p>
-<p><img src="../../_resources/8d51c2ed83264577bdb1b996e109451c.png" alt="43dd2e4bc329dd8c632332513ca5ec55.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/c8845a6fccf04092b30a37de78e2d907.png" alt="771cb599b9bb55a709161438039139cf.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/8d51c2ed83264577bdb1b996e109451c.png" alt="43dd2e4bc329dd8c632332513ca5ec55.png"></p>
 <hr>
 <p><strong>Enumerating NetBIOS in Metasploitable2</strong></p>
 <ol>
@@ -574,11 +574,11 @@ It also works on <strong>Windows only</strong>.</li>
 <ul>
 <li><strong>nbstat</strong> - Attempts to retrieve the target's <strong>NetBIOS names and MAC address</strong>.To display all names use <strong>verbose(-v)</strong>.</li>
 </ul>
-<p><img src="../../_resources/66253f21d2d44429826c474be3f4cfea.png" alt="61250d6138efc09892c0c5d75723529a.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/66253f21d2d44429826c474be3f4cfea.png" alt="61250d6138efc09892c0c5d75723529a.png"></p>
 <p><strong>T</strong> - TCP Connect scan<br>
 <strong>U</strong> - UDP scan<br>
 <strong>V</strong> - Version Detection</p>
-<p><img src="../../_resources/4746d8f1a5474d78af8425f1675bcc0c.png" alt="c7d1ce160a746eeae76f276ceacac84f.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/4746d8f1a5474d78af8425f1675bcc0c.png" alt="c7d1ce160a746eeae76f276ceacac84f.png"></p>
 <p><strong>NetBIOS Suffixes</strong><br>
 NetBIOS <strong>End Character</strong> (endchar)= the <strong>16th character</strong> of a NetBIOS name.</p>
 <p><strong>For unique names:</strong><br>
@@ -598,14 +598,14 @@ Once a computer is elected, it will keep track of what machines are connected to
 <ul>
 <li><strong>broadcast-netbios-master-browser</strong> - It discovers <strong>master browsers</strong> and the <strong>domains</strong> they manage.</li>
 </ul>
-<p><img src="../../_resources/4812e0b614584381bd0757ae77089731.png" alt="057f6a75d1587941182dbf4a9065e35d.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/4812e0b614584381bd0757ae77089731.png" alt="057f6a75d1587941182dbf4a9065e35d.png"></p>
 <ol start="2">
 <li><strong>Metasploit modules</strong></li>
 </ol>
 <ul>
 <li><strong>nbname</strong> - Discover <strong>host information</strong> through NetBIOS.</li>
 </ul>
-<p><img src="../../_resources/6cf37a7624414afeb72db96529304d42.png" alt="034669448ef9f2aa854f0b83d3b68df2.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/6cf37a7624414afeb72db96529304d42.png" alt="034669448ef9f2aa854f0b83d3b68df2.png"></p>
 <p><strong>Note:</strong></p>
 <ul>
 <li>
@@ -616,7 +616,7 @@ Once a computer is elected, it will keep track of what machines are connected to
 </li>
 </ul>
 <p><strong>Using nmblookup on Metasploitable2</strong></p>
-<p><img src="../../_resources/b10d830839de4e36abd734520b71152d.png" alt="da451e62ea643103719f8c4925765de8.png"></p>
+<p><img src="https://raw.githubusercontent.com/Ashutosh-Kukreti/ashutosh-kukreti.github.io/master/Penetration Testing/_resources/b10d830839de4e36abd734520b71152d.png" alt="da451e62ea643103719f8c4925765de8.png"></p>
 <p>As you can see, we already got some of this information in our enumeration.</p>
 <hr>
 </div></div>
