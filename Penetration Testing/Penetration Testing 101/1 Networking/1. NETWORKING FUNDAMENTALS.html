@@ -1,0 +1,522 @@
+
+				<!DOCTYPE html>
+				<html>
+					<head>
+						<meta charset="UTF-8">
+						
+						<title>1. NETWORKING FUNDAMENTALS</title>
+					</head>
+					<body>
+						<div class="exported-note"><div class="exported-note-title">1. NETWORKING FUNDAMENTALS</div>
+
+<style>
+		/* https://necolas.github.io/normalize.css/ */
+		html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
+		article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}
+		pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}
+		b,strong{font-weight:bolder}small{font-size:80%}img{border-style:none}
+
+		body {
+			font-size: 15px;
+			color: #222222;
+			word-wrap: break-word;
+			line-height: 1.6em;
+			background-color: white;
+			font-family: 'Avenir', 'Arial', sans-serif;
+			padding-bottom: 0px;
+			padding-top: 0px;
+		}
+		strong {
+			color: #000000;
+		}
+		kbd {
+			border: 1px solid rgb(220, 220, 220);
+			box-shadow: inset 0 -1px 0 rgb(220, 220, 220);
+			padding: 2px 4px;
+			border-radius: 3px;
+			background-color: rgb(243, 243, 243);
+		}
+		::-webkit-scrollbar {
+			width: 7px;
+			height: 7px;
+		}
+		::-webkit-scrollbar-corner {
+			background: none;
+		}
+		::-webkit-scrollbar-track {
+			border: none;
+		}
+		::-webkit-scrollbar-thumb {
+			background: rgba(100, 100, 100, 0.3); 
+			border-radius: 5px;
+		}
+		::-webkit-scrollbar-track:hover {
+			background: rgba(0, 0, 0, 0.1); 
+		}
+		::-webkit-scrollbar-thumb:hover {
+			background: rgba(100, 100, 100, 0.7); 
+		}
+
+		/* Remove top padding and margin from first child so that top of rendered text is aligned to top of text editor text */
+
+		#rendered-md > h1:first-child,
+		#rendered-md > h2:first-child,
+		#rendered-md > h3:first-child,
+		#rendered-md > h4:first-child,
+		#rendered-md > ul:first-child,
+		#rendered-md > ol:first-child,
+		#rendered-md > table:first-child,
+		#rendered-md > blockquote:first-child,
+		#rendered-md > img:first-child,
+		#rendered-md > p:first-child {
+			margin-top: 0;
+			padding-top: 0;
+		}
+		
+		p, h1, h2, h3, h4, h5, h6, ul, table {
+			margin-top: .6em;
+			margin-bottom: .65em;
+		}
+		h1, h2, h3, h4, h5, h6 {
+			line-height: 1.5em;
+		}
+		h1 {
+			font-size: 1.5em;
+			font-weight: bold;
+			border-bottom: 1px solid rgb(230,230,230);
+			padding-bottom: .3em;
+		}
+		h2 {
+			font-size: 1.3em;
+			font-weight: bold;
+			padding-bottom: .1em; */
+		}
+		h3 {
+			font-size: 1.1em;
+		}
+		h4, h5, h6 {
+			font-size: 1em;
+			font-weight: bold;
+		}
+		a {
+			color: rgb(80,130,190);
+		}
+		ul, ol {
+			padding-left: 0;
+			margin-left: 1.7em;
+		}
+		li {
+			margin-bottom: .4em;
+		}
+		li p {
+			margin-top: 0.2em;
+			margin-bottom: 0;
+		}
+		.resource-icon {
+			display: inline-block;
+			position: relative;
+			top: .5em;
+			text-decoration: none;
+			width: 1.2em;
+			height: 1.4em;
+			margin-right: 0.4em;
+			background-color:  rgb(80,130,190);
+		}
+    /* These icons are obtained from the wonderful ForkAwesome project by copying the src svgs 
+     * into the css classes below.
+     * svgs are obtained from https://github.com/ForkAwesome/Fork-Awesome/tree/master/src/icons/svg
+     * instead of the svg width, height property you must use a viewbox here, 0 0 1536 1792 is typically the actual size of the icon
+     * each line begins with the pre-amble -webkit-mask: url("data:image/svg+xml;utf8,
+     * and of course finishes with ");
+     * to precvent artifacts it is also necessary to include -webkit-mask-repeat: no-repeat;
+     * on the following line
+     * */
+		.fa-joplin {
+			/* Awesome Font file */
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M373.834 128C168.227 128 0 296.223 0 501.834v788.336C0 1495.778 168.227 1664 373.834 1664h788.336c205.608 0 373.83-168.222 373.83-373.83V501.834C1536 296.224 1367.778 128 1162.17 128zm397.222 205.431h417.424a7.132 7.132 0 0 1 7.132 7.133v132.552c0 4.461-3.619 8.073-8.077 8.073h-57.23c-24.168 0-43.768 19.338-44.284 43.374v2.377h-.017v136.191h-.053l-.466 509.375c-5.02 77.667-39.222 149.056-96.324 201.046-60.28 54.834-141.948 85.017-229.962 85.017-12.45 0-25.208-.61-37.907-1.785-92.157-8.682-181.494-48.601-251.662-112.438-71.99-65.517-117.147-150.03-127.164-238-11.226-98.763 23.42-192.783 95.045-257.937 81.99-74.637 198.185-101.768 316.613-75.704 5.574 1.227 9.55 6.282 9.55 11.997v199.52c-.199 2.625-1.481 6.599-8.183 2.896-.663-.365-1.194-.511-1.653-.531-21.987-10.587-45.159-17.57-68.559-19.916-.38-.04-.757-.124-1.138-.163-.537-.048-1.034-.033-1.556-.075-4.13-.354-8.183-.517-12.203-.58-.87-.011-1.771-.127-2.641-.127-.486 0-.951.05-1.437.057-1.464.011-2.886.115-4.33.163-2.76.102-5.497.211-8.182.448-.273.024-.547.07-.835.097-25.509 2.4-47.864 11.104-65.012 25.47-.954.802-1.974 1.53-2.9 2.36a1.34 1.34 0 0 1-.168.146c-23.96 21.8-34.881 53.872-30.726 90.316 4.62 40.737 26.94 81.156 62.841 113.823 35.908 32.67 80.335 52.977 125.113 57.186 35.118 3.36 66.547-3.919 89.899-20.461a97.255 97.255 0 0 0 9.365-7.501c2.925-2.661 5.569-5.5 8.086-8.416.3-.348.672-.673.975-1.024 8.253-9.864 14.222-21.067 17.996-33.148.639-2.034 1.051-4.148 1.564-6.227.381-1.563.81-3.106 1.112-4.693.555-2.784.923-5.632 1.253-8.49.086-.709.183-1.414.237-2.128.492-4.893.693-9.858.55-14.91h.013V521.623c-2.01-22.626-20.78-40.434-43.928-40.434h-57.23a8.071 8.071 0 0 1-8.077-8.073V340.564a7.132 7.132 0 0 1 7.136-7.133z'/></svg>");
+		}
+		.fa-file-image {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zm-128-448v320H256v-192l192-192 128 128 384-384zm-832-192c-106 0-192-86-192-192s86-192 192-192 192 86 192 192-86 192-192 192z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file-pdf {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zm-514-593c25 20 53 38 84 56 42-5 81-7 117-7 67 0 152 8 177 49 7 10 13 28 2 52-1 1-2 3-3 4v1c-3 18-18 38-71 38-64 0-161-29-245-73-139 15-285 46-392 83-103 176-182 262-242 262-10 0-19-2-28-7l-24-12c-3-1-4-3-6-5-5-5-9-16-6-36 10-46 64-123 188-188 8-5 18-2 23 6 1 1 2 3 2 4 31-51 67-116 107-197 45-90 80-178 104-262-32-109-42-221-24-287 7-25 22-40 42-40h22c15 0 27 5 35 15 12 14 15 36 9 68-1 3-2 6-4 8 1 3 1 5 1 8v30c-1 63-2 123-14 192 35 105 87 190 146 238zm-576 411c30-14 73-57 137-158-75 58-122 124-137 158zm398-920c-10 28-10 76-2 132 3-16 5-31 7-44 2-17 5-31 7-43 1-3 2-5 4-8-1-1-1-3-2-5-1-18-7-29-13-36 0 2-1 3-1 4zm-124 661c88-35 186-63 284-81-10-8-20-15-29-23-49-43-93-103-127-176-19 61-47 126-83 197-15 28-30 56-45 83zm646-16c-5-5-31-24-140-24 49 18 94 28 124 28 9 0 14 0 18-1 0-1-1-2-2-3z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file-word {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zM233 768v107h70l164 661h159l128-485c5-15 8-30 10-46 1-8 2-16 2-24h4l3 24c3 14 4 30 9 46l128 485h159l164-661h70V768h-300v107h90l-99 438c-4 16-6 33-7 46l-2 21h-4c0-6-2-14-3-21-3-13-5-30-9-46L825 768H711l-144 545c-4 16-5 33-8 46l-4 21h-4l-2-21c-1-13-3-30-7-46l-99-438h90V768H233z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file-powerpoint {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zm-992-234v106h327v-106h-93v-167h137c43 0 82-2 118-15 90-31 146-124 146-233s-54-193-137-228c-38-15-84-19-130-19H416v107h92v555h-92zm353-280H650V882h120c35 0 62 6 83 18 36 21 56 62 56 115 0 56-20 99-62 120-21 10-47 15-78 15z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file-excel {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zm-979-234v106h281v-106h-75l103-161c12-19 18-34 21-34h2c1 4 3 7 5 10 4 8 10 14 17 24l107 161h-76v106h291v-106h-68l-192-273 195-282h67V768H828v107h74l-103 159c-12 19-21 34-21 33h-2c-1-4-3-7-5-10-4-7-9-14-17-23L648 875h76V768H434v107h68l189 272-194 283h-68z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file-audio {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zM620 850c12 5 20 17 20 30v544c0 13-8 25-20 30-4 1-8 2-12 2-8 0-16-3-23-9l-166-167H288c-18 0-32-14-32-32v-192c0-18 14-32 32-32h131l166-167c10-9 23-12 35-7zm417 689c19 0 37-8 50-24 83-102 129-231 129-363s-46-261-129-363c-22-28-63-32-90-10-28 23-32 63-9 91 65 80 100 178 100 282s-35 202-100 282c-23 28-19 68 9 90 12 10 26 15 40 15zm-211-148c17 0 34-7 47-20 56-60 87-137 87-219s-31-159-87-219c-24-26-65-27-91-3-25 24-27 65-2 91 33 36 52 82 52 131s-19 95-52 131c-25 26-23 67 2 91 13 11 29 17 44 17z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file-video {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zM768 768c70 0 128 58 128 128v384c0 70-58 128-128 128H384c-70 0-128-58-128-128V896c0-70 58-128 128-128h384zm492 2c12 5 20 17 20 30v576c0 13-8 25-20 30-4 1-8 2-12 2-8 0-17-3-23-9l-265-266v-90l265-266c6-6 15-9 23-9 4 0 8 1 12 2z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file-archive {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M640 384V256H512v128h128zm128 128V384H640v128h128zM640 640V512H512v128h128zm128 128V640H640v128h128zm700-388c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H768v128H640V128H128v1536h1280zM781 943c85 287 107 349 107 349 5 17 8 34 8 52 0 111-108 192-256 192s-256-81-256-192c0-18 3-35 8-52 0 0 21-62 120-396V768h128v128h79c29 0 54 19 62 47zm-141 465c71 0 128-29 128-64s-57-64-128-64-128 29-128 64 57 64 128 64z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file-code {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zM480 768c11-14 31-17 45-6l51 38c14 11 17 31 6 45l-182 243 182 243c11 14 8 34-6 45l-51 38c-14 11-34 8-45-6l-226-301c-8-11-8-27 0-38zm802 301c8 11 8 27 0 38l-226 301c-11 14-31 17-45 6l-51-38c-14-11-17-31-6-45l182-243-182-243c-11-14-8-34 6-45l51-38c14-11 34-8 45 6zm-620 461c-18-3-29-20-26-37l138-831c3-18 20-29 37-26l63 10c18 3 29 20 26 37l-138 831c-3 18-20 29-37 26z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file-alt, .fa-file-csv {
+      /* fork-awesome doesn't have csv so we use the text icon */
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zM384 800c0-18 14-32 32-32h704c18 0 32 14 32 32v64c0 18-14 32-32 32H416c-18 0-32-14-32-32v-64zm736 224c18 0 32 14 32 32v64c0 18-14 32-32 32H416c-18 0-32-14-32-32v-64c0-18 14-32 32-32h704zm0 256c18 0 32 14 32 32v64c0 18-14 32-32 32H416c-18 0-32-14-32-32v-64c0-18 14-32 32-32h704z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		blockquote {
+			border-left: 4px solid rgb(220, 220, 220);
+			padding-left: 1.2em;
+			margin-left: 0;
+			opacity: .7;
+		}
+
+		.jop-tinymce table,
+		table {
+			text-align: left;
+			border-collapse: collapse;
+			border: 1px solid rgb(220, 220, 220);
+			background-color: white;
+		}
+
+		.jop-tinymce table td, .jop-tinymce table th,
+		table td, th {
+			text-align: left;
+			padding: .5em 1em .5em 1em;
+			font-size: 15px;
+			color: #222222;
+			font-family: 'Avenir', 'Arial', sans-serif;
+		}
+
+		.jop-tinymce table td,
+		table td {
+			border: 1px solid rgb(220, 220, 220);
+		}
+
+		.jop-tinymce table th,
+		table th {
+			border: 1px solid rgb(220, 220, 220);
+			border-bottom: 2px solid rgb(220, 220, 220);
+			background-color: rgb(247, 247, 247);
+		}
+
+		.jop-tinymce table tr:nth-child(even),
+		table tr:nth-child(even) {
+			background-color: rgb(247, 247, 247);
+		}
+
+		.jop-tinymce table tr:hover,
+		table tr:hover {
+			background-color: #e5e5e5;
+		}
+
+		hr {
+			border: none;
+			border-bottom: 2px solid rgb(230,230,230);
+		}
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+		
+		.inline-code,
+		.mce-content-body code {
+			border: 1px solid rgb(220, 220, 220);
+			background-color: rgb(243, 243, 243);
+			padding-right: .2em;
+			padding-left: .2em;
+			border-radius: .25em;
+			color: rgb(0,0,0);
+			font-size: .9em;
+		}
+
+		.highlighted-keyword {
+			background-color: #F3B717;
+			color: black;
+		}
+
+		.not-loaded-resource img {
+			width: 1.15em;
+			height: 1.15em;
+			background: white;
+			padding: 2px !important;
+			border-radius: 2px;
+			box-shadow: 0 1px 3px #000000aa;
+		}
+
+		a.not-loaded-resource img {
+			margin-right: .2em;
+		}
+
+		a.not-loaded-resource {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+		}
+
+		.md-checkbox input[type=checkbox]:checked {
+			opacity: 0.7;
+		}
+
+		.md-checkbox .checkbox-label-checked {
+			opacity: 0.5;
+		}
+
+		.exported-note-title {
+			font-size: 2.2em;
+			font-weight: bold;
+			margin-bottom: 1em;
+		}
+
+		.exported-note {
+			padding: 1em;
+		}
+
+		.joplin-editable .joplin-source {
+			display: none;
+		}
+
+		/* =============================================== */
+		/* For TinyMCE */
+		/* =============================================== */
+
+		.mce-content-body {
+			/* Note: we give a bit more padding at the bottom, to allow scrolling past the end of the document */
+			padding: 5px 10px 10em 10px;
+		}
+
+		/*
+		.mce-content-body code {
+			background-color: transparent;
+		}
+		*/
+
+		.mce-content-body [data-mce-selected=inline-boundary] {
+			background-color: transparent;
+		}
+
+		.mce-content-body .joplin-editable {
+			cursor: pointer !important;
+		}
+
+		.mce-content-body.mce-content-readonly {
+			opacity: 0.5;
+		}
+
+		/* We need that to make sure click events have the A has a target */
+		.katex a span {
+			pointer-events: none;
+		}
+
+		/* Clear the CODE style if the element is within a joplin-editable block */
+		.mce-content-body .joplin-editable code {
+			border: none;
+			background: none;
+			padding: 0;
+			color: inherit;
+			font-size: inherit;
+		}
+
+		/* =============================================== */
+		/* For TinyMCE */
+		/* =============================================== */
+
+		@media print {
+			body {
+				height: auto !important;
+			}
+
+			pre {
+				white-space: pre-wrap;
+			}
+
+			.code, .inline-code {
+				border: 1px solid #CBCBCB;
+			}
+
+			#joplin-container-content {
+				/* The height of the content is set dynamically by JavaScript (in updateBodyHeight) to go
+				   around various issues related to scrolling. However when printing we don't want this
+				   fixed size as that would crop the content. So we set it to auto here. "important" is
+				   needed to override the style set by JavaScript at the element-level. */
+				height: auto !important;
+			}
+		}
+	</style><div id="rendered-md"><p><strong>SECTION 1 – NETWORKING FUNDAMENTALS</strong></p>
+<p><strong>OSI MODEL</strong> – OPEN SYSTEM INTERCONNECTION MODEL<br>
+Compromise of <strong>7 layers</strong> and explain how data transfer takes place.<br>
+There are unique protocols at every layer.</p>
+<p><img src="../../_resources/129bf30858404e489f6f2f7606fbfc07.png" alt="97b9d9f50cd5c04a6a93e78a84e4aaa3.png"></p>
+<p>Each layer enclose data from another layer to facilitate data transmission.<br>
+After the data reaches to the destination the reverse process (unpacking) happens.</p>
+<p>Each layer is in charge of some kind of processing and each layer only talks to the layers immediately below and above it.</p>
+<p><img src="../../_resources/22d3ec5f15b04009810ac2281c6635e7.png" alt="5566780c6c768990fff23255970fcea8.png"></p>
+<p>Each layer will add or remove control information that it is in charge of.</p>
+<p><img src="../../_resources/8c45ee90f8d04fca8f92bd864c95ef37.png" alt="44a4cfa22ef27074dafe5c2ea67adc4a.png"></p>
+<p><img src="../../_resources/bea355b0e81247bcb7c899ec83276441.png" alt="6c99bb998e0530fb0aa2c16ae393af39.png"></p>
+<p><strong>Summary of Layer 1 and 2</strong><br>
+When a network card receives a stream of bits over the network, it receives the data from the wires (the first layer), then the second layer is responsible for making sense of these 1s and 0s. The second layer first checks the destination MAC address in the frame to make sure the data was intended for that computer. If the destination MAC address matches the MAC address of the network card, it carries on.</p>
+<p><strong>Layer 5: Session</strong><br>
+The session layer manages the setting up and taking down of the association between two communicating end points, called a connection. A connection is maintained while the two end points are communicating back and forth.<br>
+It's in this layer that ports are used and that data is properly directed.</p>
+<p><img src="../../_resources/b8603394ff6e4df4b5de574d6768c40b.png" alt="30d5af5373d2e5a5698a3777141441f0.png"></p>
+<hr>
+<p><strong>IP Address:</strong><br>
+[Layer 3, Routing]<br>
+Unique Address of a device on a network.</p>
+<p><img src="../../_resources/a12a79881778453c87dbd7671320ffa0.png" alt="e0dbfcb91a7c08eedf8fef37efc381a7.png"></p>
+<p>Structure:<br>
+They are composed of octets (range 0 to 255).<br>
+An octet is a group of eight binary digits (0,1).<br>
+[1 = on , 0 = off]<br>
+Ex: 192.168.1.5</p>
+<p><img src="../../_resources/2c784e96478542c7a366490ee44dc05e.png" alt="2f23d08c32107a54f3c35abbf3561502.png"></p>
+<p><img src="../../_resources/ee61200a54694404b20023a99812e6dd.png" alt="d7dada36a05fcc476d023d1fdd567779.png"></p>
+<p><img src="../../_resources/5549792f77114bf79598a293278fefc1.png" alt="c654a17edd211d113a0c61017cb024b8.png"></p>
+<p>when IP address is combined with a subnet mask,we can calculate the network subnet(LAN) to which the host belongs to.</p>
+<p><strong>Subnet masks</strong> accompany an IP address and the two values work together.<br>
+Netmask tells us how many IP address we can have.<br>
+Applying the subnet mask to an IP address splits the address into two parts, an extended network address(network portion of the address), and a host address.<br>
+Subnet masks contain <strong>two parts:</strong> the left side with all mask bits set to 1 (the extended network portion) and the right side with all bits set to 0 (the host portion).</p>
+<p><strong>Example</strong>- 11111111 11111111 11111111 00000000 = 255.255.255.0<br>
+A bit value of 11111111 is equal to 255.<br>
+<img src="../../_resources/4022927539ea4e46a0082e5a250a7c9e.png" alt="165aba208afea78468a9111de5fea584.png"><br>
+Position with 255 means we are completely <strong>locked out</strong> but other than 255 it means we have flexibility.<br>
+In the example 24 bits are turned on therefore we have <strong>“/24”</strong> network here which means We can not change the first 24 bits of the network.</p>
+<p><strong>Example</strong> in <strong>192.168.134.x</strong> , 192.168.134 is fixed and 'X' can be anything from 0 to 255</p>
+<ul>
+<li>
+<p><strong>255</strong> - The value of 255 is never used as an address for any part of the IP address. It is reserved for broadcast addressing.<br>
+<strong>Ex:</strong> There are 256 hosts(addresses available) in '/24'.<br>
+But first adn last address are reserved<br>
+<strong>Broadcast</strong> address - last address - 192.168.1.255<br>
+<strong>Network ID</strong> address - first address - 192.168.1.0<br>
+Therefore only <strong>254</strong> addresses out of 256 are available.</p>
+</li>
+<li>
+<p>Most popular subnet masks:<br>
+<img src="../../_resources/3ad43b79c75847a29bb73e590f526d67.png" alt="a4093b31446c512d6f2ca2a0b232d1d7.png"></p>
+</li>
+</ul>
+<p><img src="../../_resources/678f8da382a1433caa07a09fe7af599e.png" alt="796603e3650ae354ae15e4220aa44ff8.png"></p>
+<p>Number of <strong>IP Addresses available</strong>:<br>
+<strong>IPv4</strong> = 2^32<br>
+<strong>IPv6</strong> = 2^128</p>
+<ul>
+<li>We have IPv6 but we do not use it, we still use IPv4 Thanks to <strong>NAT(Network Address Translation)</strong>.</li>
+</ul>
+<p><strong>Types</strong> Of IP Addresses:</p>
+<p><em>1. Private IP</em></p>
+<p><img src="../../_resources/96c76a3239f44e8385ddb6ea9a869c24.png" alt="fa6a0585256d7a12ba8e32b9be593bf9.png"></p>
+<p><em>2. Public IP (Rent/Purchase from ISP)</em></p>
+<p><img src="../../_resources/688f5dc23501478bbae90ee35e513e7c.png" alt="b463ff4b8ef2d7ca1f65865484256a23.png"></p>
+<hr>
+<p><strong>Broadcast Address</strong><br>
+A subnet has only 254 addresses instead of 256 because two of the address are used up by default on every subnet:the subnet number and broadcast address<br>
+Subnet number-first number in subnet range identifies the subnet.Ends with .0<br>
+Broadcast address-last address on the subnet.Ends with .255</p>
+<hr>
+<p><strong>Mac Addresses</strong><br>
+[Layer 2, Switching]</p>
+<p><img src="../../_resources/e5499b83757141989f58d9ad01193246.png" alt="b81473694e44fbb39b4c6c8ca5abbf62.png"></p>
+<p>Here,<br>
+<strong>inet</strong>   = IPv4<br>
+<strong>inet6</strong> = IPv6<br>
+<strong>ether</strong> = MAC addresses(Physical Address)</p>
+<p>Media Access Control Address helps in identifying a unique host on a network.Used by switches to know what device is what.<br>
+<strong>MAC Address</strong>-Layer 2-Data Link Layer<br>
+<strong>IP Address</strong>-Layer 3-Network Layer</p>
+<p>It is associated with <strong>NIC(Network Interface Card)</strong>.<br>
+They are globally unique.<br>
+48 bits length and 12 hexadecimal characters.</p>
+<p>First 6 of 12 chars are assigned to different organizations.This part is called <strong>OUI (Organizationally Unique Identifier)</strong>.<br>
+First 3 Pairs are identifiers (identify manufacturers)<br>
+Ex: 00:0c:29 = VMware Inc.</p>
+<p><strong>Router</strong> is a layer 2/3 device since it does both routing and switching.</p>
+<hr>
+<p><strong>ARP</strong><br>
+Address Resolution Protocol-the mechanism that bridges gap between IP and MAC Addresses.<br>
+Networking devices and computers keep ARP Tables that match IP Addresses to MAC Addresses.<br>
+ARP table is used when data is shared within same subnet.<br>
+If destination IP is not in the same subnet the data is forwarded to default gateway.<br>
+If there is no MAC in Arp table,the host will send an ARP broadcast on the subnet using subnet's broadcast address to every host - asking who owns the IP Address?</p>
+<hr>
+<p>Basic information about network interfaces:<br>
+Windows - <strong>ipconfig /all</strong><br>
+Linux - <strong>ifconfig</strong></p>
+<p>Contents of ARP cache: <strong>arp -a</strong></p>
+<hr>
+<p><strong>TCP/IP Ports &amp; Protocols</strong><br>
+A port is a way to tag different types of traffic.<br>
+Well known ports and protocols:</p>
+<p><img src="../../_resources/706ec7fa0169460b92ec526510a556a6.png" alt="7f41830cfcdb5ef2389030fdf8c8695b.png"></p>
+<ul>
+<li>Firewall block or permit certain types of traffic based on ports.</li>
+</ul>
+<hr>
+<p><strong>TCP vs UDP</strong><br>
+[Layer 4,Transportation Layer]</p>
+<p><strong>TCP</strong></p>
+<ul>
+<li>Transmission Control Protocol</li>
+<li>Connection Oriented Protocol</li>
+<li>High Reliability</li>
+<li>Utilised by http/s,ssh,ftp</li>
+<li>Works on 3-way handshake SYN&gt;SYN-ACK&gt;ACK</li>
+</ul>
+<p><strong>UDP</strong></p>
+<ul>
+<li>User Datagram Protocol</li>
+<li>Connection Less Protocol</li>
+<li>Utilised by VoIP,DNS,Streaming Services</li>
+</ul>
+<p><img src="../../_resources/870fff17cb7f482896979ffb1008a97a.png" alt="f090d94239be5ff247f38eb473fefb25.png"></p>
+<p><strong>Protocols Info</strong></p>
+<ul>
+<li><strong>Telenet</strong> - used for remote login</li>
+<li><strong>SSH</strong> - Encrypted version of telenet</li>
+<li><strong>SMB</strong> - samba -file sharing</li>
+<li><strong>DHCP</strong> - associate IP Address</li>
+<li><strong>TFTP</strong> -Trivial FTP utilises UDP instead of TCP</li>
+<li><strong>SNMP</strong> - Simple Network Management Protocol</li>
+</ul>
+<p>If you want to <strong>troubleshoot network</strong> start from Physical Layer.</p>
+<hr>
+<p>One day there will not be enough IP Addresses to support the number of devices.Therefore the idea of <strong>private networks and NAT</strong> came into existence.<br>
+Range of private IP Address:</p>
+<p><img src="../../_resources/d657f3a81043410da0d40cd3818db1d4.png" alt="5fafe8fd8cf078036e6cbf11b8870b4e.png"></p>
+<p>192.168.1.0 - most common default network assigned to home routers.<br>
+Device on private network cannot reach internet unless an intermediary device performs <strong>NAT or Network Address Translation.</strong><br>
+<strong>NAT</strong> - swaps one hosts ip address for another ip address.<br>
+Multiple private address can share the same public IP address.<br>
+Devices on private network behind NAT firewall are hidden from the public internet.</p>
+<p><img src="../../_resources/f2515474ecde4be996f395d1d7b2a01b.png" alt="c6af85d8cfc7291306d28fd7d51d1c00.png"></p>
+<hr>
+<p><strong>Ports</strong><br>
+When referring to a network or the Internet, a <strong>software or network port</strong> is a location where information is sent.</p>
+<ul>
+<li>A port number is always associated with an IP address of a host and the protocol type of the communication.</li>
+<li><strong>For example</strong>, port 80 is the http network port.<br>
+There are a total of <strong>65,535</strong> ports.</li>
+<li>Each of which is either <em>Transmission Control Protocol (TCP) or User Datagram Protocol (UDP)</em> port types, there are some ports which are both TCP and UDP types.</li>
+</ul>
+</div></div>
+					</body>
+				</html>
+			
